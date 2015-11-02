@@ -1,0 +1,12 @@
+# You can copy this file to your computer with the following command:
+# wget https://gist.github.com/raw/1267907/.alias
+
+# include in your .bash_profile with "source .alias" or do the following:
+# ln -s .alias .bash_aliases
+
+alias ll="ls -al"
+alias ..="cd .."
+alias ...="cd ../.."
+alias pu=pushd
+alias po=popd
+alias psgrep="psgrep -a"
