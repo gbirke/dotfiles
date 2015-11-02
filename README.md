@@ -1,14 +1,17 @@
 # Dotfiles for chiborg
 
-This is my collection of personal dotfiles
+This is my collection of personal dotfiles.
 
 ## Installation
 
 Installing the files needs the GNU [`stow`](http://www.gnu.org/software/stow/) command.
 
-- Clone this repo to ~/.dotfiles:
-- `cd ~/.dotfiles`
-- `./install_all.sh`
+1. Clone this repo to ~/.dotfiles:  
+  `git clone git@github.com:gbirke/dotfiles.git .dotfiles`
+2. `cd ~/.dotfiles`
+3. `./install_all.sh`
+
+You may choose a differnt name than .dotfiles, but make sure it's below root. Otherwise you have to edit the install script to use the `--target DIR` parameter of `stow`.
 
 ### Install single dotfiles
 - `stow vim`
