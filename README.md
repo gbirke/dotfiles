@@ -14,6 +14,7 @@ Installing the files needs the GNU [`stow`](http://www.gnu.org/software/stow/) c
 You may choose a differnt name than .dotfiles, but make sure it's below root. Otherwise you have to edit the install script to use the `--target DIR` parameter of `stow`.
 
 ### Install single dotfiles
+- `stow ack`
 - `stow vim`
 - `stow git`
 - `stow bash`
