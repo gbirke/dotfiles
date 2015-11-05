@@ -15,9 +15,9 @@ You may choose a differnt name than .dotfiles, but make sure it's below root. Ot
 
 ### Install single dotfiles
 - `stow ack`
-- `stow vim`
-- `stow git`
 - `stow bash`
+- `stow git`
+- `stow vim`
 - `stow zsh`
 
 ## Thanks

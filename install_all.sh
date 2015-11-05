@@ -1,7 +1,7 @@
 #!/bin/sh
 
 stow ack
-stow vim
-stow git
 stow bash
+stow git
+stow vim
 stow zsh
