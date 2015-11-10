@@ -21,12 +21,16 @@ set printoptions=duplex:off,
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%v%)\ %P
 set modeline
 set modelines=3
-set t_Co=256 " activate 256 colors 
+set t_Co=256 " activate 256 colors
 filetype plugin on
 colorscheme blue
 syntax on
+
+" Popular command typos
 command W :w
 command Wq :wq
+command WQ :wq
+command Q :q
 
 map <up> gk
 imap <up> <C-o>gk
@@ -34,11 +38,12 @@ map <down> gj
 imap <down> <C-o>gj
 imap <home> <C-o>g<home>
 imap <end> <C-o>g<end>
-"Zwei Buchstaben vertauschen (Cursor auf dem vorderen Buchstaben)
+
+" Swap two characters (Cursor on the first char)
 nmap ; "idl"ip
 
-nmenu PHP.Check\ Syntax :w !/usr/local/php/bin/php -l
-
+" Use :set list to show whitespace
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " Colorscheme-Aenderungen
 hi Pmenu guibg=#2050d0 guifg=#90fff0
