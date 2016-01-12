@@ -7,7 +7,7 @@ This is my collection of personal dotfiles.
 Installing the files needs the GNU [`stow`](http://www.gnu.org/software/stow/) command.
 
 1. Clone this repo to ~/.dotfiles:  
-  `git clone git@github.com:gbirke/dotfiles.git ~/.dotfiles`
+  `git clone https://github.com/gbirke/dotfiles.git ~/.dotfiles`
 2. `cd ~/.dotfiles`
 3. `./install_all.sh`
 
