@@ -26,6 +26,8 @@
     unstage = reset HEAD --
     unstash = stash pop
     publish = push -u origin HEAD
+    ciagain = commit -a --amend --no-edit
+    add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
 [push]
     default = simple
 [difftool "sourcetree"]
