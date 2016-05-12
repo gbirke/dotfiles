@@ -28,6 +28,8 @@
     publish = push -u origin HEAD
     ciagain = commit -a --amend --no-edit
     add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
+    forcepush = push -f --no-verify
+    amend = commit --amend
 [push]
     default = simple
 [difftool "sourcetree"]
