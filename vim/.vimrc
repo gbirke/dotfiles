@@ -1,20 +1,21 @@
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+call plug#end()
+
+
 set number
 set linebreak
 set hidden
 set nobackup
-set autoindent
 set smartindent
 set nowrap
-set incsearch
 set shiftwidth=4
 set tabstop=4
 set expandtab
 set showmatch
 set tabstop=4
 set history=200
-set display+=lastline
-set laststatus=2
-set backspace=eol,indent,start
 set fileencodings=utf-8,latin-1,ucs-bom
 set formatoptions=tcrqw
 set printoptions=duplex:off,
@@ -22,9 +23,7 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%v%)\ %P
 set modeline
 set modelines=3
 set t_Co=256 " activate 256 colors
-filetype plugin on
 colorscheme blue
-syntax on
 
 " Popular command typos
 command W :w
