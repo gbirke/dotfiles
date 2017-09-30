@@ -5,3 +5,10 @@ stow bash
 stow git
 stow vim
 stow zsh
+
+mkdir -p ~/.config
+
+CURDIR=`pwd`
+
+ln -s $PWD/config/fish ~/.config/fish
+ln -s $PWD/config/omf ~/.config/omf
