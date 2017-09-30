@@ -34,8 +34,16 @@ They can be added by creating the file `~/.gituser` with the following contents:
 
     # vim: ft=gitconfig
 
+
+# Using VIM configuration with VimPlug package manager
+If you want to use the vim configuration with the [VimPlug][2] package manager, use the following commands:
+
+    install_vimplug.sh
+    stow vim-plug
+    vim -c PlugInstall
+
 ## Thanks
 Thanks to Brandon Invergo who [introduced me to this easy method of managing the dotfiles][1].
 
 [1]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
-
+[2]: https://github.com/junegunn/vim-plug
