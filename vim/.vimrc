@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 call plug#end()
 
