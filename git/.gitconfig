@@ -24,6 +24,7 @@
     co = checkout
     df = diff
     lg = log -p
+    lastlog = log -p -1
     unstage = reset HEAD --
     unstash = stash pop
     publish = push -u origin HEAD
