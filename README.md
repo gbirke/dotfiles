@@ -21,8 +21,13 @@ Otherwise you have to edit the install script to use the `--target DIR` paramete
 - `stow vim`
 - `stow zsh`
 
+## Fish configuration
+First, install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish), [powerline fonts](https://github.com/powerline/fonts) for the [bob-the-fish theme](https://github.com/oh-my-fish/theme-bobthefish), and [fzf](https://github.com/junegunn/fzf)
+
+    rm -rf ~/.config/omf && ln -s ~/.dotfiles/config/omf ~/.config/omf
+
     ln -s ~/.dotfiles/config/fish ~/.config/fish
-    ln -s ~/.dotfiles/config/omf ~/.config/omf
+
 
 ## Configuring git name and email address
 I intentionally left out the name and email address from the git configuration because I use different ones for work and private commits.
