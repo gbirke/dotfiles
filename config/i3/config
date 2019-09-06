@@ -163,3 +163,5 @@ bar {
 # Turn numlock on by default
 exec numlockx on
 
+# Start Browser with shortcurt
+bindsym $mod+b exec firefox
