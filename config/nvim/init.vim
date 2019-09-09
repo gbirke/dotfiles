@@ -39,6 +39,8 @@ Plug 'vim-scripts/upAndDown'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'leafgarland/typescript-vim'
+Plug 'dense-analysis/ale'
 call plug#end()	
 
 colorscheme onedark
