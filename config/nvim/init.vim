@@ -29,6 +29,7 @@ nmap ; "idl"ip
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'pearofducks/ansible-vim'
 Plug 'qpkorr/vim-bufkill'
 Plug '/usr/local/opt/fzf'
