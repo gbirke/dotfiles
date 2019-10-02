@@ -34,6 +34,10 @@ nnoremap <up> gk
 " Swap two characters (Cursor on the first char)
 nmap ; "idl"ip
 
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
