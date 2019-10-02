@@ -24,6 +24,10 @@ command Wq :wq
 command WQ :wq
 command Q :q
 
+" Upward motion line-by-line, even on wrapped lines
+nnoremap <down> gj
+nnoremap <up> gk
+
 " Swap two characters (Cursor on the first char)
 nmap ; "idl"ip
 
