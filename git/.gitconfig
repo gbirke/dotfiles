@@ -1,7 +1,6 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore_global
-	editor = vim -f
 [color]
     ui = auto
 [color "branch"]
