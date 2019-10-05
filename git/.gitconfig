@@ -43,3 +43,6 @@
 	trustExitCode = true
 [include]
     path = ~/.gituser
+[rebase]
+	autosquash = true
+
