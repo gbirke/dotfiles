@@ -42,6 +42,10 @@ nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
+
+" Automatically close bracckets
+Plug 'vim-scripts/AutoClose'
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
