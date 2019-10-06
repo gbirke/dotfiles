@@ -44,18 +44,32 @@ nmap <Leader>r :Tags<CR>
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'pearofducks/ansible-vim'
 Plug 'qpkorr/vim-bufkill'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+
+"Show contents of registers when hitting "
 Plug 'junegunn/vim-peekaboo'
+
+" Show Plus, minus and tilde signs in a gutter column to show git status"
 Plug 'airblade/vim-gitgutter'
+
+" Atom-Like theme
 Plug 'joshdick/onedark.vim'
+
+"" Move Lines with Shift-<Up> and Shift-<Down>
 Plug 'vim-scripts/upAndDown'
 Plug 'scrooloose/nerdtree'
+
+" Align text, see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 Plug 'godlygeek/tabular'
+
+" Languages support
 Plug 'plasticboy/vim-markdown'
 Plug 'leafgarland/typescript-vim'
+Plug 'pearofducks/ansible-vim'
+
+" Asynchronous linting
 Plug 'dense-analysis/ale'
 call plug#end()	
 
