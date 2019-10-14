@@ -34,6 +34,12 @@ command Q :q
 nnoremap <down> gj
 nnoremap <up> gk
 
+" Switch between splits more quickly
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Swap two characters (Cursor on the first char)
 nmap ; "idl"ip
 
