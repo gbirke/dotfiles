@@ -52,6 +52,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Automatically close bracckets
 Plug 'vim-scripts/AutoClose'
 
+"Autocomplete"
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript'
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
@@ -88,6 +92,7 @@ colorscheme onedark
 " Disable automated folding of markdown files
 let g:vim_markdown_folding_disabled = 1
 
+let g:deoplete#enable_at_startup = 1
 
 " Autocommands
 
