@@ -38,4 +38,5 @@
     path = ~/.gituser
 [rebase]
 	autosquash = true
-
+[diff]
+	noprefix = true
