@@ -46,6 +46,7 @@ nmap ; "idl"ip
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
+nmap <Leader>ne :NERDTreeFocus<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 
