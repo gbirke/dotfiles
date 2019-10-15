@@ -83,6 +83,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'leafgarland/typescript-vim'
 Plug 'pearofducks/ansible-vim'
+Plug 'evanleck/vim-svelte'
 
 " Asynchronous linting
 Plug 'dense-analysis/ale'
