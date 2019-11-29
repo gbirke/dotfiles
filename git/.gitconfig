@@ -1,6 +1,9 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore_global
+	ignorecase = false
+	commitGraph = true
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
     ui = auto
 [color "branch"]
@@ -22,7 +25,9 @@
     br = branch
     co = checkout
     df = diff
+    rb = rebase
     lg = log -p
+    ls = log --color --graph --pretty=format:'%Cred%h%Creset -
     lastlog = log -p -1
     unstage = reset HEAD --
     unstash = stash pop
@@ -40,3 +45,5 @@
 	autosquash = true
 [diff]
 	noprefix = true
+[gc]
+	writeCommitGraph = true
