@@ -48,22 +48,39 @@ nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>ne :NERDTreeFocus<CR>
 
+" Plugin settings
+let g:deoplete#enable_at_startup = 1
+
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Automatically close bracckets
-Plug 'vim-scripts/AutoClose'
+" Languages support
+Plug 'plasticboy/vim-markdown'
+Plug 'pearofducks/ansible-vim'
+Plug 'evanleck/vim-svelte'
+Plug 'wlangstroth/vim-racket'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
 
 "Autocomplete"
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mhartington/nvim-typescript'
 
+" Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
+
+"Git Plugin
 Plug 'tpope/vim-fugitive'
+
+" Move, Rename, Copy buffers and do other file system commands
+Plug 'tpope/vim-eunuch'
+
+" Kill buffers without closing the current window
 Plug 'qpkorr/vim-bufkill'
+
+" fzf integration
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
-"Show contents of registers when hitting "
+" Show contents of registers when hitting "
 Plug 'junegunn/vim-peekaboo'
 
 " Show Plus, minus and tilde signs in a gutter column to show git status"
@@ -72,18 +89,14 @@ Plug 'airblade/vim-gitgutter'
 " Atom-Like theme
 Plug 'joshdick/onedark.vim'
 
-"" Move Lines with Shift-<Up> and Shift-<Down>
+" Move Lines with Shift-<Up> and Shift-<Down>
 Plug 'vim-scripts/upAndDown'
+
+" Show filesystem tree in window
 Plug 'scrooloose/nerdtree'
 
 " Align text, see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 Plug 'godlygeek/tabular'
-
-" Languages support
-Plug 'plasticboy/vim-markdown'
-Plug 'leafgarland/typescript-vim'
-Plug 'pearofducks/ansible-vim'
-Plug 'evanleck/vim-svelte'
 
 " Asynchronous linting
 Plug 'dense-analysis/ale'
@@ -94,7 +107,6 @@ colorscheme onedark
 " Disable automated folding of markdown files
 let g:vim_markdown_folding_disabled = 1
 
-let g:deoplete#enable_at_startup = 1
 
 let g:ale_linters = {
 \'javascript':['eslint']	
