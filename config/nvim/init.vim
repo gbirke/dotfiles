@@ -61,8 +61,9 @@ Plug 'wlangstroth/vim-racket'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
 
-"Autocomplete"
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Autocomplete/Language server
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
