@@ -61,6 +61,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
 Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'vito-c/jq.vim'
 
 "Autocomplete/Language server
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
