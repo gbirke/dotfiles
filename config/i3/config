@@ -176,3 +176,10 @@ exec numlockx on
 
 # Start Browser with shortcurt
 bindsym $mod+b exec firefox
+
+# Start greenclip clipboard manager
+exec greenclip daemon
+
+# Start rofi with greenclip clipboard manager.
+# This is the # key on German keyboards and the \ key on English ones
+bindcode $mod+51 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
