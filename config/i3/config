@@ -42,6 +42,12 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# rofi as an application launcher
+bindsym $mod+space exec "rofi -show drun -modi drun,run,window,ssh &>/tmp/out"
+
+# rofi as a window switcher
+bindsym $mod+Tab exec "rofi -show window"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -84,7 +90,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
