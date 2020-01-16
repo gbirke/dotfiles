@@ -9,6 +9,4 @@ source ~/.config/fish/abbrevs.fish
 # set nvim as the git editor
 set -x GIT_EDITOR nvim
 
-# Load autojump if it's installed
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
