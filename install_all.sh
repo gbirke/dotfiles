@@ -2,6 +2,7 @@
 
 stow ack
 stow bash
+stow ctags
 stow git
 stow vim
 stow zsh
