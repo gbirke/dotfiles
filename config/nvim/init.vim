@@ -51,17 +51,28 @@ nmap <Leader>ne :NERDTreeFocus<CR>
 " Plugin settings
 let g:deoplete#enable_at_startup = 1
 
+" Language server for vue, needs https://www.npmjs.com/package/vue-language-server
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Languages support
 Plug 'plasticboy/vim-markdown'
 Plug 'pearofducks/ansible-vim'
-Plug 'evanleck/vim-svelte'
-Plug 'wlangstroth/vim-racket'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim' " Yet Another TypeScript Syntax
 Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'vito-c/jq.vim'
+Plug 'leafOfTree/vim-vue-plugin'
+
+" Languages not often used (eg. Advent of code), enable if really needed
+" Plug 'evanleck/vim-svelte'
+" Plug 'wlangstroth/vim-racket'
+" Plug 'derekwyatt/vim-scala'
+" Plug 'elixir-editors/vim-elixir'
+
 
 "Autocomplete/Language server
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -112,7 +123,8 @@ let g:vim_markdown_folding_disabled = 1
 
 
 let g:ale_linters = {
-\'javascript':['eslint']	
+	\'javascript':['eslint']
 \}
 
-
+" Re-enable for Scala file types
+" au BufRead,BufNewFile *.sbt set filetype=scala
