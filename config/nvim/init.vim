@@ -40,6 +40,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Show tags in current project with fzf
+nnoremap <C-O> :Tags<CR>
+
 " Swap two characters (Cursor on the first char)
 nmap ; "idl"ip
 
