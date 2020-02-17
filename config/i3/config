@@ -173,8 +173,7 @@ bar {
 }
 
 # Make the keyboard layout switchable between US and DE by pressing alt-shift
-exec "setxkbmap -layout us,de"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec "setxkbmap -layout us,de; setxkbmap -option 'grp:alt_shift_toggle'"
 
 # Turn numlock on by default
 exec numlockx on
