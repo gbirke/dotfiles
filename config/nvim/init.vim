@@ -76,6 +76,9 @@ Plug 'leafOfTree/vim-vue-plugin'
 " Plug 'derekwyatt/vim-scala'
 " Plug 'elixir-editors/vim-elixir'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'algotech/ultisnips-php'
 
 "Autocomplete/Language server
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
