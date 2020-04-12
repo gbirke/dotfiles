@@ -1,5 +1,8 @@
+package argu
 package autojump
+package expand
 package https://github.com/decors/fish-colored-man
+package marlin
 package tab
 theme bobthefish
 theme budspencer
