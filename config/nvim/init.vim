@@ -118,8 +118,12 @@ Plug 'scrooloose/nerdtree'
 " Align text, see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 Plug 'godlygeek/tabular'
 
+" Automatically insert matching pairs for braces and quotes
+Plug 'jiangmiao/auto-pairs'
+
 " Asynchronous linting
 Plug 'dense-analysis/ale'
+
 call plug#end()	
 
 colorscheme onedark
