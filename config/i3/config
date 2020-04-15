@@ -95,6 +95,15 @@ bindsym $mod+Shift+space floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# class                 border   backgr.  text    indicator child_border
+client.focused          #4c566a  #4c566a  #eceff4 #458588   #4c566a
+client.focused_inactive #3b4252  #3b4252  #eceff4 #4c566a   #282828
+client.unfocused        #2e3440  #2e3440  #eceff4 #2e3440   #2e3440
+client.urgent           #bf616a  #bf616a  #2e3440 #d08770   #bf616a
+client.placeholder      #000000  #0c0c0c  #eceff4 #000000   #0c0c0c
+
+client.background       #2e3440
+
 # focus the child container
 #bindsym $mod+d focus child
 
