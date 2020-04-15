@@ -198,7 +198,7 @@ exec --no-startup-id greenclip daemon
 bindcode $mod+51 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
 
 # assign applications to workspaces
-assign [class="jetbrains-phpstorm" title="/PhpStorm/"] $workspace3
+assign [class="jetbrains-phpstorm"] $workspace3
 
 # TODO force floating PHPStorm windows to tile in $workspace3. 
 # for_window [class="jetbrains-phpstorm" title="^Terminal$"] floating disable, move container to workspace 3
