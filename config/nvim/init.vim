@@ -59,6 +59,9 @@ let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls']
     \ }
 
+" Directories of my notes
+let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Languages support
@@ -120,6 +123,9 @@ Plug 'godlygeek/tabular'
 
 " Automatically insert matching pairs for braces and quotes
 Plug 'jiangmiao/auto-pairs'
+
+" Notational Velocity
+Plug 'alok/notational-fzf-vim'
 
 " Asynchronous linting
 Plug 'dense-analysis/ale'
