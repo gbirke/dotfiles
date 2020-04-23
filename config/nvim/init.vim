@@ -51,6 +51,9 @@ nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>ne :NERDTreeFocus<CR>
 
+" fzf-nvalt
+nmap <Leader>nv :NV<CR>
+
 " Plugin settings
 let g:deoplete#enable_at_startup = 1
 
