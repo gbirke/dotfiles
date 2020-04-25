@@ -13,6 +13,9 @@ set cursorline
 " Proper word wrapping in soft wrap mode
 set linebreak
 
+" Turn on filetype plugins in .config/nvim/ftplugin
+filetype plugin on
+
 " Change cursor to be more visible: Green block in normal mode, Red stripe in insert mode. 
 hi Cursor guifg=green guibg=green
 hi Cursor2 guifg=red guibg=red
