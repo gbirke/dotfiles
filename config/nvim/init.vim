@@ -78,6 +78,7 @@ Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'vito-c/jq.vim'
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'ekalinin/Dockerfile.vim'
 
 " Languages not often used (eg. Advent of code), enable if really needed
 " Plug 'evanleck/vim-svelte'
