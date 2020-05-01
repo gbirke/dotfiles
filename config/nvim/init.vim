@@ -79,6 +79,7 @@ Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'vito-c/jq.vim'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'matthew-brett/vim-rst-sections'
 
 " Languages not often used (eg. Advent of code), enable if really needed
 " Plug 'evanleck/vim-svelte'
