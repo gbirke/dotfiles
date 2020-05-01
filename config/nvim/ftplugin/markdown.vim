@@ -1,7 +1,6 @@
 " I want my Markdown to have 'hard wrap' mode on by default
 
-" 90 is a good width for my usual terminal size
-setlocal textwidth=90
+setlocal textwidth=74
 
 " Break lines while in insert mode (hard wrap)
 setlocal formatoptions-=l
