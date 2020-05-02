@@ -2,22 +2,30 @@
 
 " Use True color Terminal
 set termguicolors 
+
 " Set Tab width to 4 Spaces
 set tabstop=4
+
 " Set shiftwidth to 4
 set shiftwidth=4
+
 " Display line numbers in gutter
 set number
+
 " Highlight current line
 set cursorline
+
 " Proper word wrapping in soft wrap mode
 set linebreak
 
-" Turn on filetype plugins in .config/nvim/ftplugin
-filetype plugin on
-
 " Set spelling dictionary
 set spellfile=~/.vim/spell/en.utf-8.add
+
+" Store undo tree between sessions. Nvim stores the files in /.local/share/nvim/undo (`:help undodir´)
+set undofile
+
+" Turn on filetype plugins in .config/nvim/ftplugin
+filetype plugin on
 
 " Set leader key from \ to ,
 let mapleader = ","
