@@ -16,11 +16,6 @@ set linebreak
 " Turn on filetype plugins in .config/nvim/ftplugin
 filetype plugin on
 
-" Change cursor to be more visible: Green block in normal mode, Red stripe in insert mode. 
-hi Cursor guifg=green guibg=green
-hi Cursor2 guifg=red guibg=red
-set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
-
 " Set spelling dictionary
 set spellfile=~/.vim/spell/en.utf-8.add
 
