@@ -19,7 +19,7 @@ set cursorline
 set linebreak
 
 " Set spelling dictionary
-set spellfile=~/.vim/spell/en.utf-8.add
+set spellfile=~/.config/nvim/spell/en.utf-8.add
 
 " Store undo tree between sessions. Nvim stores the files in /.local/share/nvim/undo (`:help undodir´)
 set undofile
