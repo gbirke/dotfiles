@@ -24,6 +24,10 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 " Store undo tree between sessions. Nvim stores the files in /.local/share/nvim/undo (`:help undodir´)
 set undofile
 
+" Allow project-specific .vimrc files, but restrict commands to secure ones
+set exrc
+set secure
+
 " Turn on filetype plugins in .config/nvim/ftplugin
 filetype plugin on
 
@@ -155,3 +159,5 @@ let g:ale_linters = {
 
 " Re-enable for Scala file types
 " au BufRead,BufNewFile *.sbt set filetype=scala
+
+
