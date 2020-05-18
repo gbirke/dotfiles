@@ -114,6 +114,9 @@ Plug 'tpope/vim-eunuch'
 " Kill buffers without closing the current window
 Plug 'qpkorr/vim-bufkill'
 
+" VimWiki
+Plug 'vimwiki/vimwiki'
+
 " fzf integration
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -156,6 +159,8 @@ let g:vim_markdown_folding_disabled = 1
 let g:ale_linters = {
 	\'javascript':['eslint']
 \}
+
+runtime wikiconfig.vim
 
 " Re-enable for Scala file types
 " au BufRead,BufNewFile *.sbt set filetype=scala
