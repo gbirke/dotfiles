@@ -31,7 +31,6 @@ Symfony
 Refactor
 DIC
 linting
-en
 cyclomatic
 namespace
 nullable
@@ -48,7 +47,5 @@ blog
 php
 bugfix
 README
-Titanenbrut
-Scions
 playbooks
 playbook
