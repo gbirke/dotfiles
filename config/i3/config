@@ -43,7 +43,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # rofi as an application launcher
-bindsym $mod+space exec "rofi -show drun -modi drun,run,window,ssh &>/tmp/out"
+bindsym $mod+space exec "rofi -show drun -drun-show-actions -modi drun,run,window,ssh &>/tmp/out"
 
 # rofi as a window switcher
 bindsym $mod+Tab exec "rofi -show window"
