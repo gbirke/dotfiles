@@ -138,6 +138,9 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# assign applications to workspaces
+assign [class="jetbrains-phpstorm"] $workspace3
+for_window [class="Spotify"] move to workspace $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -184,25 +187,31 @@ bar {
 		position top
 }
 
+
+##################################################
+# 					Autostart
+##################################################
+
 # Make the keyboard layout switchable between US and DE by pressing alt-shift
 exec --no-startup-id "setxkbmap -layout us,de; setxkbmap -option 'grp:alt_shift_toggle'"
 
 # Turn numlock on by default
 exec --no-startup-id numlockx on
 
-# Start Browser with shortcurt
-bindsym $mod+b exec firefox
-
 # Start greenclip clipboard manager
 exec --no-startup-id greenclip daemon
+
+exec --no-startup-id dunst
+
+##################################################
+#				Application shortcuts
+##################################################
+
+# Start Browser with shortcurt
+bindsym $mod+b exec firefox
 
 # Start rofi with greenclip clipboard manager.
 # This is the # key on German keyboards and the \ key on English ones
 bindcode $mod+51 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
 
-# assign applications to workspaces
-assign [class="jetbrains-phpstorm"] $workspace3
-for_window [class="Spotify"] move to workspace $workspace10
 
-# TODO force floating PHPStorm windows to tile in $workspace3. 
-# for_window [class="jetbrains-phpstorm" title="^Terminal$"] floating disable, move container to workspace 3
