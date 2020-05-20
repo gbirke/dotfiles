@@ -202,6 +202,7 @@ bindcode $mod+51 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -r
 
 # assign applications to workspaces
 assign [class="jetbrains-phpstorm"] $workspace3
+for_window [class="Spotify"] move to workspace $workspace10
 
 # TODO force floating PHPStorm windows to tile in $workspace3. 
 # for_window [class="jetbrains-phpstorm" title="^Terminal$"] floating disable, move container to workspace 3
