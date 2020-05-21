@@ -31,8 +31,8 @@ set secure
 " Turn on filetype plugins in .config/nvim/ftplugin
 filetype plugin on
 
-" Set leader key from \ to ,
-let mapleader = ","
+" Set leader key from \ to Space
+let mapleader = " "
 
 " Remap common command typos
 command W :w
