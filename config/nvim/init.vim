@@ -28,6 +28,9 @@ set undofile
 set exrc
 set secure
 
+" Faster updates of gitgutter and coc
+set updatetime=300
+
 " Turn on filetype plugins in .config/nvim/ftplugin
 filetype plugin on
 
@@ -158,6 +161,7 @@ let g:ale_linters = {
 	\'javascript':['eslint']
 \}
 
+runtime coc_config.vim
 runtime wikiconfig.vim
 
 " Re-enable for Scala file types
