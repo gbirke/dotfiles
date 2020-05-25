@@ -65,7 +65,6 @@ nmap <Leader>ne :NERDTreeFocus<CR>
 nmap <Leader>nv :NV<CR>
 
 " Plugin settings
-let g:deoplete#enable_at_startup = 1
 
 " Language server for vue, needs https://www.npmjs.com/package/vue-language-server
 let g:LanguageClient_serverCommands = {
@@ -101,7 +100,6 @@ Plug 'SirVer/ultisnips'
 Plug 'algotech/ultisnips-php'
 
 "Autocomplete/Language server
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Surround code with quotes, brackets, etc
