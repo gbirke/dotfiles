@@ -185,6 +185,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command SCRIPT_DIR=~/.config/i3blocks-contrib i3blocks -c ~/.config/i3/i3blocks.conf
 		position top
+
+		# Disable mouse scroll wheel in bar to prevent accidental change of workspace
+		bindsym button4 nop
+		bindsym button5 nop
 }
 
 
