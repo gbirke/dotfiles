@@ -66,6 +66,9 @@ nmap <Leader>nv :NV<CR>
 
 " Plugin settings
 
+" Highlight typescript sections
+let g:vim_vue_plugin_use_typescript = 1
+
 " Language server for vue, needs https://www.npmjs.com/package/vue-language-server
 let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls']
