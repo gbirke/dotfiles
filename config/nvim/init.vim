@@ -64,6 +64,8 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>ne :NERDTreeFocus<CR>
+" Show current file in NERDTree
+nmap <Leader>nf :NERDTreeFind<CR>
 
 " fzf-nvalt
 nmap <Leader>nv :NV<CR>
