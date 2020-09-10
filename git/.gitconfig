@@ -47,3 +47,5 @@
 	noprefix = true
 [gc]
 	writeCommitGraph = true
+[pull]
+	ff = only
