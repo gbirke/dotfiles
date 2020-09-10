@@ -13,3 +13,6 @@ setlocal comments=b:>,b:*,b:+,b:-\ [\ ],b:-
 " nnoremap <S-RIGHT> :HeaderIncrease<CR>
 " nnoremap <S-LEFT>< :HeaderDecrease<CR>
 
+" Restore Enter-Completion for markdown files when VimWiki is active
+inoremap <expr> <CR>   pumvisible() ? "\<CR>"   : "<Esc>:VimwikiReturn 1 5<CR>"
+inoremap <silent> <buffer> <expr> <CR>   pumvisible() ? "\<CR>"   : "<Esc>:VimwikiReturn 1 5<CR>"
