@@ -77,6 +77,10 @@ let g:LanguageClient_serverCommands = {
 " Directories of my notes
 let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
 
+" Disable BufKill mappings of leader key beginning with b, to speed up fzf
+" buffer switch
+let g:BufKillCreateMappings = 0
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Languages support
