@@ -51,6 +51,9 @@ command! Reload execute "source ~/.config/nvim/init.vim"
 nnoremap <down> gj
 nnoremap <up> gk
 
+" Delete search highlight with backspace
+nnoremap <BS> :nohlsearch<CR>
+
 " Switch between splits more quickly
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
