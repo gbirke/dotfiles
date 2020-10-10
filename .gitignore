@@ -2,3 +2,4 @@ config/fish/fishd.*
 config/fish/fish_variables
 config/fish/functions/fzf_key_bindings.fish
 config/nvim/wikiconfig.vim
+config/nvim/.netrwhist
