@@ -99,7 +99,7 @@ Plug 'vito-c/jq.vim'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'matthew-brett/vim-rst-sections'
-Plug 'reasonml-editor/vim-reason-plus'
+Plug 'amiralies/vim-rescript'
 Plug 'dag/vim-fish'
 
 " Languages not often used (eg. Advent of code), enable if really needed
