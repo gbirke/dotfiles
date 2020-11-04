@@ -61,7 +61,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Swap two characters (Cursor on the first char)
-nmap ; "idl"ip
+nmap <Leader>, "sdl"sp
 
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Files<CR>
