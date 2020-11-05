@@ -4,6 +4,7 @@ stow ack
 stow bash
 stow ctags
 stow git
+stow tmux
 stow vim
 stow zsh
 
