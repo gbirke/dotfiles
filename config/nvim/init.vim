@@ -83,6 +83,9 @@ let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls']
     \ }
 
+" Specify CoC extensions that should always exist
+let g:coc_global_extensions = ['coc-json', 'coc-rls']
+
 " Directories of my notes
 let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
 
