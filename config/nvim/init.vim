@@ -125,6 +125,9 @@ Plug 'tpope/vim-surround'
 "Git Plugin
 Plug 'tpope/vim-fugitive'
 
+" Show Git commits
+Plug 'junegunn/gv.vim'
+
 " Move, Rename, Copy buffers and do other file system commands
 Plug 'tpope/vim-eunuch'
 
