@@ -144,6 +144,9 @@ Plug 'junegunn/vim-peekaboo'
 " Show Plus, minus and tilde signs in a gutter column to show git status"
 Plug 'airblade/vim-gitgutter'
 
+" Automatically regenerate .spl files from word lists
+Plug 'micarmst/vim-spellsync'
+
 " Atom-Like theme
 Plug 'joshdick/onedark.vim'
 
