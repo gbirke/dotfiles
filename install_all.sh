@@ -17,4 +17,5 @@ ln -s $PWD/config/dunst ~/.config/dunst
 ln -s $PWD/config/fish ~/.config/fish
 ln -s $PWD/config/nvim ~/.config/nvim
 ln -s $PWD/config/omf ~/.config/omf
+ln -s $PWD/config/youtube-dl ~/.config/youtube-dl
 
