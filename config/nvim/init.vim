@@ -169,6 +169,9 @@ Plug 'godlygeek/tabular'
 " Automatically insert matching pairs for braces and quotes
 Plug 'jiangmiao/auto-pairs'
 
+" Automatically close tags
+Plug 'alvan/vim-closetag'
+
 " Notational Velocity
 Plug 'alok/notational-fzf-vim'
 
@@ -187,6 +190,7 @@ let g:ale_linters = {
 	\'javascript':['eslint']
 \}
 
+runtime autoclose_tags.vim
 runtime coc_config.vim
 runtime wikiconfig.vim
 
