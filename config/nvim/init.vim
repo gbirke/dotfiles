@@ -193,4 +193,6 @@ runtime wikiconfig.vim
 " Re-enable for Scala file types
 " au BufRead,BufNewFile *.sbt set filetype=scala
 
+" Highlight *.pcss files (postcss) as CSS (will use the postcss syntax)
+au BufNewFile,BufRead *.less set filetype=css
 
