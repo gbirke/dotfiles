@@ -61,8 +61,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-    -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+	-- launch rofi
+	, ((modm,				xK_space), spawn "rofi -show drun -drun-show-actions -modi drun,run,window,ssh")
+
+	-- launch rofi clipboard history
+	, ((modm,				xK_backslash), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_q     ), kill)
@@ -241,7 +244,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
 	spawnOnce "numlockx on &"
-	spawnOnce "greenclip daemon &"
+	spawnOnce "/home/gbirke/bin/greenclip daemon &"
 --	spawnOnce "dunst"
 
 ------------------------------------------------------------------------
