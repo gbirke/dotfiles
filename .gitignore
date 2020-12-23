@@ -1,5 +1,11 @@
 config/fish/fishd.*
 config/fish/fish_variables
 config/fish/functions/fzf_key_bindings.fish
+
 config/nvim/wikiconfig.vim
 config/nvim/.netrwhist
+
+xmonad/xmonad-x86_64-linux
+xmonad/xmonad.errors
+xmonad/xmonad.hi
+xmonad/xmonad.o
