@@ -245,7 +245,7 @@ myLogHook = return ()
 myStartupHook = do
 	spawnOnce "numlockx on &"
 	spawnOnce "/home/gbirke/bin/greenclip daemon &"
---	spawnOnce "dunst"
+	spawnOnce "dunst"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
