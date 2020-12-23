@@ -1,6 +1,7 @@
 -- IMPORTS
 
 import XMonad
+import XMonad.Util.SpawnOnce
 import Data.Monoid
 import System.Exit
 
@@ -236,7 +237,10 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+myStartupHook = do
+	spawnOnce "numlockx on &"
+	spawnOnce "greenclip daemon &"
+--	spawnOnce "dunst"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
