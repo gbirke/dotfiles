@@ -63,7 +63,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
 	-- launch rofi
-	, ((modm,				xK_space), spawn "rofi -show drun -drun-show-actions -modi drun,run,window,ssh")
+	, ((modm,				xK_space), spawn "rofi -show drun -drun-show-actions -modi drun,run,window,ssh -show-icons")
 
 	-- launch rofi clipboard history
 	, ((modm,				xK_backslash), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")
