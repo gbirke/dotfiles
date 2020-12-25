@@ -45,10 +45,11 @@ myModMask       = mod4Mask
 --
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
--- Border colors for unfocused and focused windows, respectively.
---
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myNormalBorderColor :: String
+myNormalBorderColor  = "#2E3440"  -- Border color of normal windows
+
+myFocusedBorderColor :: String
+myFocusedBorderColor  = "#5E81AC"  -- Border color of focused windows
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
