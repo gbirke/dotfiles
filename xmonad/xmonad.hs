@@ -245,7 +245,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
 	spawnOnce "numlockx on &"
-	spawnOnce "/home/gbirke/bin/greenclip daemon &"
+	spawnOnce "greenclip daemon &"
 	spawnOnce "dunst &"
 	spawnOnce "xsetroot -cursor_name left_ptr"
 	spawnOnce "~/.fehbg"
