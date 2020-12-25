@@ -248,6 +248,7 @@ myStartupHook = do
 	spawnOnce "/home/gbirke/bin/greenclip daemon &"
 	spawnOnce "dunst &"
 	spawnOnce "xsetroot -cursor_name left_ptr"
+	spawnOnce "~/.fehbg"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
