@@ -1,8 +1,8 @@
 -- IMPORTS
 
 import XMonad
-import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent, ppVisible,
-  ppTitle, ppLayout, xmobarColor, wrap, shorten)
+import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent, ppVisible, ppHidden, ppLayout,
+  ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
@@ -253,15 +253,21 @@ myEventHook = mempty
 myLogHook proc = dynamicLogWithPP $ xmobarPP
   { ppOutput  = hPutStrLn proc
   , ppCurrent = currentStyle
-  , ppVisible = visibleStyle
   , ppTitle   = titleStyle
+  , ppLayout  = layoutStyle
+  , ppHidden  = hiddenStyle
+  , ppSep     = separatorStyle
+  , ppUrgent  = urgentStyle
   }
   where
-    currentStyle = xmobarColor "yellow" "" . wrap "[" "]"
-    visibleStyle = wrap "(" ")"
-    titleStyle   = xmobarColor "cyan" "" . shorten 100 . filterCurly
-    filterCurly  = filter (not . isCurly)
-    isCurly x    = x == '{' || x == '}'
+    hiddenStyle    = xmobarColor "#8FBCBB" "" . wrap " " " "
+    currentStyle   = xmobarColor "#ECEFF4" "#5E81AC" . wrap " " " "
+    layoutStyle    = xmobarColor "#D8DEE9" ""
+    separatorStyle = "<fc=#3B4252> | </fc>"
+    urgentStyle    = xmobarColor "#BF616A" "" . wrap "!" "!"
+    titleStyle     = xmobarColor "#81A1C1" "" . shorten 100 . filterCurly
+    filterCurly    = filter (not . isCurly)
+    isCurly x      = x == '{' || x == '}'
 
 ------------------------------------------------------------------------
 -- Startup hook

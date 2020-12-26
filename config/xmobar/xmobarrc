@@ -1,9 +1,10 @@
 Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
        , additionalFonts = []
-       , borderColor = "black"
-       , border = TopB
-       , bgColor = "black"
-       , fgColor = "grey"
+       , borderColor = "#5e81ac"
+       , border = BottomB
+       , borderWidth = 2
+       , bgColor = "#2E3440"
+       , fgColor = "#ECEFF4"
        , alpha = 255
        , position = Top
        , textOffset = -1
@@ -16,9 +17,9 @@ Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red", "-t", "IN <rx> OUT <rx>", "-S", "True" ] 10
+                                          "--normal","#A3BE8C","--high","#BF616A", "-t", "IN <rx> OUT <rx>", "-S", "True" ] 10
                     , Run Cpu ["-L","9","-H","50",
-                               "--normal","green","--high","red"] 10
+                               "--normal","#A3BE8C","--high","#BF616A"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap ["-t", "Swp: <usedratio>%"] 10
                     , Run Date "%Y-%m-%d %H:%M:%S" "date" 10
@@ -27,5 +28,5 @@ Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%UnsafeStdinReader%  }\
-                    \{ %memory% * %swap% <fc=#333333>|</fc> %eth0% <fc=#333333>|</fc> %cpu% <fc=#333333>|</fc> %date%"
+                    \{ %memory% * %swap% <fc=#3b4252>|</fc> %eth0% <fc=#3b4252>|</fc> %cpu% <fc=#3b4252>|</fc> %date%"
        }
