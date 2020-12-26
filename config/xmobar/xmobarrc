@@ -22,9 +22,10 @@ Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap ["-t", "Swp: <usedratio>%"] 10
                     , Run Date "%Y-%m-%d %H:%M:%S" "date" 10
+                    , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "  }\
+       , template = "%UnsafeStdinReader%  }\
                     \{ %memory% * %swap% <fc=#333333>|</fc> %eth0% <fc=#333333>|</fc> %cpu% <fc=#333333>|</fc> %date%"
        }

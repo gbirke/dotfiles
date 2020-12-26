@@ -1,6 +1,8 @@
 -- IMPORTS
 
 import XMonad
+import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent, ppVisible,
+  ppTitle, ppLayout, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
@@ -248,7 +250,18 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = return ()
+myLogHook proc = dynamicLogWithPP $ xmobarPP
+  { ppOutput  = hPutStrLn proc
+  , ppCurrent = currentStyle
+  , ppVisible = visibleStyle
+  , ppTitle   = titleStyle
+  }
+  where
+    currentStyle = xmobarColor "yellow" "" . wrap "[" "]"
+    visibleStyle = wrap "(" ")"
+    titleStyle   = xmobarColor "cyan" "" . shorten 100 . filterCurly
+    filterCurly  = filter (not . isCurly)
+    isCurly x    = x == '{' || x == '}'
 
 ------------------------------------------------------------------------
 -- Startup hook
@@ -272,7 +285,7 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "xmobar -x 0 /home/gbirke/.config/xmobar/xmobarrc"
-    xmonad $ docks defaults
+    xmonad $ docks $ defaults xmproc
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -280,7 +293,7 @@ main = do
 --
 -- No need to modify this.
 --
-defaults = def {
+defaults logHandle = def {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
@@ -299,7 +312,7 @@ defaults = def {
         layoutHook         = myLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
-        logHook            = myLogHook,
+        logHook            = myLogHook logHandle,
         startupHook        = myStartupHook
     }
 
