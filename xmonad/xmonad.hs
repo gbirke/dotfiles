@@ -15,6 +15,9 @@ import qualified Data.Map        as M
 --
 myTerminal      = "gnome-terminal"
 
+-- The preferred browser
+myBrowser       = "firefox"
+
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
@@ -62,11 +65,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-	-- launch rofi
-	, ((modm,				xK_space), spawn "rofi -show drun -drun-show-actions -modi drun,run,window,ssh -show-icons")
+    -- launch rofi
+    , ((modm,               xK_space), spawn "rofi -show drun -drun-show-actions -modi drun,run,window,ssh -show-icons")
 
-	-- launch rofi clipboard history
-	, ((modm,				xK_backslash), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")
+    -- launch rofi clipboard history
+    , ((modm,               xK_backslash), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")
+
+    -- launch power menu
+    , ((modm .|. shiftMask, xK_F12), spawn "rofi -show power-menu -modi power-menu:rofi-power-menu -font 'FiraMono Nerd Font 24' -lines 10")
+
+    -- launch browser
+    , ((modm,               xK_b     ), spawn myBrowser)
 
     -- close focused window
     , ((modm .|. shiftMask, xK_q     ), kill)
@@ -126,7 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    -- , ((modm .|. shiftMask             , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_e     ), io (exitWith ExitSuccess))
@@ -250,11 +259,11 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawnOnce "numlockx on &"
-	spawnOnce "greenclip daemon &"
-	spawnOnce "dunst &"
-	spawnOnce "xsetroot -cursor_name left_ptr"
-	spawnOnce "~/.fehbg"
+    spawnOnce "numlockx on &"
+    spawnOnce "greenclip daemon &"
+    spawnOnce "dunst &"
+    spawnOnce "xsetroot -cursor_name left_ptr"
+    spawnOnce "~/.fehbg"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -262,8 +271,8 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-	xmproc <- spawnPipe "xmobar -x 0 /home/gbirke/.config/xmobar/xmobarrc"
-	xmonad $ docks defaults
+    xmproc <- spawnPipe "xmobar -x 0 /home/gbirke/.config/xmobar/xmobarrc"
+    xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -344,3 +353,5 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-button1  Set the window to floating mode and move by dragging",
     "mod-button2  Raise the window to the top of the stack",
     "mod-button3  Set the window to floating mode and resize by dragging"]
+
+-- vim: set tabstop=2 shiftwidth=2 expandtab
