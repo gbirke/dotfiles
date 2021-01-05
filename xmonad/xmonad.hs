@@ -278,6 +278,7 @@ myLogHook proc = dynamicLogWithPP $ xmobarPP
 --
 -- By default, do nothing.
 myStartupHook = do
+	spawnOnce "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
     spawnOnce "numlockx on &"
     spawnOnce "greenclip daemon &"
     spawnOnce "dunst &"
