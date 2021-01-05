@@ -16,8 +16,8 @@ Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","#A3BE8C","--high","#BF616A", "-t", "IN <rx> OUT <rx>", "-S", "True" ] 10
+       , commands = [ Run Network "eth0" ["-L","0","-H","4096",
+                                          "--normal","#A3BE8C","--high","#BF616A", "-t", "IN <rx> OUT <rx>", "-S", "True", "-m", "6" ] 10
                     , Run Cpu ["-L","9","-H","50",
                                "--normal","#A3BE8C","--high","#BF616A"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
