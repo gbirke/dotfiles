@@ -5,7 +5,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
-import XMonad.Layout.Tabbed (simpleTabbed)
+import XMonad.Layout.Tabbed
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
 import Data.Monoid
@@ -200,10 +200,13 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| simpleTabbed)
+myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| myTabs )
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
+
+     -- Tabs at the top with default shrinker and custom theme
+     myTabs  = tabbed shrinkText myTabTheme
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -213,6 +216,21 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| simpleTabbed)
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
+
+myTabTheme :: Theme
+myTabTheme = def { activeColor       = "#4C566A"
+               , activeBorderColor   = "#4C566A"
+               , activeTextColor     = "#D8DEE9"
+               , inactiveColor       = "#434C5E"
+               , inactiveBorderColor = "#3B4252"
+               , inactiveTextColor   = "#81A1C1"
+               , urgentColor         = "#292E39"
+               , urgentBorderColor   = "#292E39"
+               , urgentTextColor     = "#D08770"
+               , fontName            = "xft:Ubuntu Mono:size=14"
+               , decoHeight          = 20
+     }
+
 
 ------------------------------------------------------------------------
 -- Window rules:
