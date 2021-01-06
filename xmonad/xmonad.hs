@@ -5,6 +5,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
+import XMonad.Layout.Named
 import XMonad.Layout.Tabbed
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
@@ -206,7 +207,7 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| myTabs )
      tiled   = Tall nmaster delta ratio
 
      -- Tabs at the top with default shrinker and custom theme
-     myTabs  = tabbed shrinkText myTabTheme
+     myTabs  = named "Tabbed" $ tabbed shrinkText myTabTheme
 
      -- The default number of windows in the master pane
      nmaster = 1
