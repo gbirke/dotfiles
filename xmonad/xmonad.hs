@@ -4,6 +4,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent, ppVisible, ppHidden, ppLayout,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
 import Data.Monoid
@@ -278,6 +279,7 @@ myLogHook proc = dynamicLogWithPP $ xmobarPP
 --
 -- By default, do nothing.
 myStartupHook = do
+    setWMName "LG3D" -- Set fake name for window manager trick Java GUIs
     spawnOnce "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
     spawnOnce "numlockx on &"
     spawnOnce "greenclip daemon &"
