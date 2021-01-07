@@ -147,7 +147,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_e     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
-    , ((modm .|. shiftMask, xK_r     ), spawn "xmonad --recompile; xmonad --restart")
+    , ((modm .|. shiftMask, xK_r     ), spawn "xmonad --recompile && xmonad --restart && notify-send 'XMonad' 'Restarted XMonad'")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -161,15 +161,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-    ++
+    
+	-- ++
 
     --
     -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
-    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+    -- [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
+    --    | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+    --    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
 ------------------------------------------------------------------------
