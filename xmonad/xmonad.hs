@@ -6,7 +6,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent,
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.LayoutModifier
-import XMonad.Layout.Named
+import XMonad.Layout.Renamed
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Layout.Tabbed
@@ -211,16 +211,19 @@ mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 myLayout = avoidStruts ( tiled ||| mtiled ||| noBorders Full ||| myTabs )
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = mySpacing 8 
+     tiled   = renamed [CutWordsLeft 1]
+	 	$ mySpacing 8 
 	 	$ Tall nmaster delta ratio
 
 	 -- Horizontal version of tiled algorithm
-     mtiled  = Mirror 
+     mtiled  = renamed [CutWordsLeft 1]
 	 	$ mySpacing 8 
+	 	$ Mirror 
 		$ Tall nmaster delta ratio
 
      -- Tabs at the top with default shrinker and custom theme
-     myTabs  = named "Tabbed" $ tabbed shrinkText myTabTheme
+     myTabs  = renamed [CutWordsRight 1] 
+	 	$ tabbed shrinkText myTabTheme
 
      -- The default number of windows in the master pane
      nmaster = 1
