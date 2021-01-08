@@ -5,8 +5,10 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
+import XMonad.Layout.LayoutModifier
 import XMonad.Layout.Named
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Spacing
 import XMonad.Layout.Tabbed
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
@@ -195,6 +197,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 ------------------------------------------------------------------------
 -- Layouts:
 
+mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
+mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
+
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
 -- restarting (with 'mod-q') to reset your layout state to the new
@@ -203,10 +208,16 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| noBorders Full ||| myTabs )
+myLayout = avoidStruts ( tiled ||| mtiled ||| noBorders Full ||| myTabs )
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
+     tiled   = mySpacing 8 
+	 	$ Tall nmaster delta ratio
+
+	 -- Horizontal version of tiled algorithm
+     mtiled  = Mirror 
+	 	$ mySpacing 8 
+		$ Tall nmaster delta ratio
 
      -- Tabs at the top with default shrinker and custom theme
      myTabs  = named "Tabbed" $ tabbed shrinkText myTabTheme
