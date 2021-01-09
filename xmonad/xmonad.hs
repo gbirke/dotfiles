@@ -412,4 +412,4 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-button2  Raise the window to the top of the stack",
     "mod-button3  Set the window to floating mode and resize by dragging"]
 
--- vim: set tabstop=2 shiftwidth=2 expandtab
+-- vim: tabstop=2 shiftwidth=2 expandtab
