@@ -85,6 +85,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch browser
     , ((modm,               xK_b     ), spawn myBrowser)
 
+    -- switch keyboard layout
+    , ((modm,               xK_BackSpace), spawn "switch-keyboard-layout")
+
     -- close focused window
     , ((modm .|. shiftMask, xK_q     ), kill)
 
