@@ -23,10 +23,11 @@ Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap ["-t", "Swp: <usedratio>%"] 10
                     , Run Date "%Y-%m-%d %H:%M:%S" "date" 10
+                    , Run Kbd [("us", "US"), ("de", "DE")]
                     , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%UnsafeStdinReader%  }\
-                    \{ %memory% * %swap% <fc=#3b4252>|</fc> %eth0% <fc=#3b4252>|</fc> %cpu% <fc=#3b4252>|</fc> %date%"
+                    \{ %memory% <fc=#3b4252>|</fc> %swap% <fc=#3b4252>|</fc> %eth0% <fc=#3b4252>|</fc> %cpu% <fc=#3b4252>|</fc> Kbd: %kbd% <fc=#3b4252>|</fc> %date%"
        }
