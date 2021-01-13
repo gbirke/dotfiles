@@ -5,6 +5,8 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
+import XMonad.Hooks.UrgencyHook
+
 import XMonad.Layout.LayoutModifier
 import XMonad.Layout.Renamed
 import XMonad.Layout.NoBorders
@@ -304,7 +306,7 @@ myLogHook proc = dynamicLogWithPP $ xmobarPP
     currentStyle   = xmobarColor "#ECEFF4" "#5E81AC" . wrap " " " "
     layoutStyle    = xmobarColor "#D8DEE9" ""
     separatorStyle = "<fc=#3B4252> | </fc>"
-    urgentStyle    = xmobarColor "#BF616A" "" . wrap "!" "!"
+    urgentStyle    = xmobarColor "#BF616A" ""
     titleStyle     = xmobarColor "#81A1C1" "" . shorten 100 . filterCurly
     filterCurly    = filter (not . isCurly)
     isCurly x      = x == '{' || x == '}'
@@ -333,7 +335,7 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "xmobar -x 0 /home/gbirke/.config/xmobar/xmobarrc"
-    xmonad $ docks $ defaults xmproc
+    xmonad $ withUrgencyHook NoUrgencyHook $ docks $ defaults xmproc
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
