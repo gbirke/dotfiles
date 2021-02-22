@@ -249,8 +249,8 @@ myTabTheme = def { activeColor       = "#4C566A"
                , urgentColor         = "#292E39"
                , urgentBorderColor   = "#292E39"
                , urgentTextColor     = "#D08770"
-               , fontName            = "xft:Ubuntu Mono:size=14"
-               , decoHeight          = 20
+               , fontName            = "xft:Ubuntu Mono:size=12"
+               , decoHeight          = 32
      }
 
 
@@ -323,6 +323,7 @@ myStartupHook = do
     setWMName "LG3D" -- Set fake name for window manager trick Java GUIs
     spawnOnce "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
     spawnOnce "numlockx on &"
+    spawnOnce "compton &"
     spawnOnce "greenclip daemon &"
     spawnOnce "dunst &"
     spawnOnce "xsetroot -cursor_name left_ptr"
