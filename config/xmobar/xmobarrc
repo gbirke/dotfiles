@@ -1,4 +1,4 @@
-Config { font = "xft:Ubuntu Mono:pixelsize=14:antialias=true:hinting=true"
+Config { font = "xft:Ubuntu Mono:pixelsize=24:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#5e81ac"
        , border = BottomB
