@@ -109,6 +109,7 @@ Plug 'amiralies/vim-rescript'
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'tpope/vim-liquid'
 
 " Languages not often used (eg. Advent of code), enable if really needed
 " Plug 'evanleck/vim-svelte'
