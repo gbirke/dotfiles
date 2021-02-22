@@ -70,6 +70,10 @@ nmap <Leader>ne :NERDTreeFocus<CR>
 " Show current file in NERDTree
 nmap <Leader>nf :NERDTreeFind<CR>
 
+" Fugitive shortcuts
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gc :Git commit
+
 " fzf-nvalt
 nmap <Leader>nv :NV<CR>
 
