@@ -161,6 +161,10 @@ Plug 'joshdick/onedark.vim'
 " Move Lines with Shift-<Up> and Shift-<Down>
 Plug 'vim-scripts/upAndDown'
 
+" Quickly move between words in a line with f and t, highlights the unique
+" find targets
+Plug 'unblevable/quick-scope'
+
 " Show filesystem tree in window
 Plug 'scrooloose/nerdtree'
 
