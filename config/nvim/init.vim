@@ -121,6 +121,9 @@ Plug 'tpope/vim-liquid'
 Plug 'SirVer/ultisnips'
 Plug 'algotech/ultisnips-php'
 
+" Expand Zen coding / Emmet style class names to HTML with Ctrl-E
+Plug 'rstacruz/sparkup'
+
 "Autocomplete/Language server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
