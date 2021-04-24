@@ -23,7 +23,8 @@
     st = status
     ci = commit
     br = branch
-    co = checkout
+	co = checkout
+	sw = switch
     df = diff
     rb = rebase
     lg = log -p
