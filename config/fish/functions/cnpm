@@ -1,8 +1,0 @@
-# Run cat17 npm in a docker context
-function cnpm
-    if [ (git remote get-url origin) != "git@github.com:wmde/FundraisingFrontend.git" ]
-        echo "Can only run in FundraisingFrontend dir!"
-        return 1
-    end
-    docker run --rm -it --user (id -u):(id -g) -v (pwd)/skins/cat17:/data:delegated -w /data -v (pwd)/tmp/home:/var/nodehome:delegated -v (pwd)/tmp/passwd:/etc/passwd node:8 npm $argv
-end
