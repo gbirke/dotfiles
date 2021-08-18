@@ -205,7 +205,8 @@ let g:vim_markdown_folding_disabled = 1
 
 let g:ale_linters = {
 	\'javascript':['eslint'],
-	\'jsx':['eslint']
+	\'jsx':['eslint'],
+	\'markdown':['mdl', 'writegood']
 \}
 
 runtime autoclose_tags.vim
