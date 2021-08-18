@@ -117,6 +117,8 @@ Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-liquid'
+Plug 'lepture/vim-jinja'
+Plug 'jparise/vim-graphql'
 
 " Languages not often used (eg. Advent of code), enable if really needed
 " Plug 'evanleck/vim-svelte'
