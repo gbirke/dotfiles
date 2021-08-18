@@ -1,4 +1,4 @@
-" Basic settings
+"{{{ Basic settings
 
 " Use True color Terminal
 set termguicolors 
@@ -33,6 +33,9 @@ set updatetime=300
 
 " Turn on filetype plugins in .config/nvim/ftplugin
 filetype plugin on
+"}}}
+
+"{{{ Keyboard mappings
 
 " Set leader key from \ to Space
 let mapleader = " "
@@ -77,7 +80,9 @@ nmap <Leader>gc :Git commit
 " fzf-nvalt
 nmap <Leader>nv :NV<CR>
 
-" Plugin settings
+"}}}
+"
+"{{{ Plugin settings
 
 " Highlight typescript sections
 let g:vim_vue_plugin_use_typescript = 1
@@ -90,13 +95,16 @@ let g:LanguageClient_serverCommands = {
 " Specify CoC extensions that should always exist
 let g:coc_global_extensions = ['coc-json', 'coc-rls']
 
-" Directories of my notes
+" Directories of my notes for Notation Velocity plugin
 let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
 
 " Disable BufKill mappings of leader key beginning with b, to speed up fzf
 " buffer switch
 let g:BufKillCreateMappings = 0
 
+"}}}
+
+"{{{ Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Languages support
@@ -197,6 +205,9 @@ Plug 'dense-analysis/ale'
 
 call plug#end()	
 
+"}}}
+
+"{{{ More Plugin settings and colorscheme
 colorscheme onedark
 
 " Disable automated folding of markdown files
@@ -209,13 +220,12 @@ let g:ale_linters = {
 	\'markdown':['mdl', 'writegood']
 \}
 
+" }}}
+
+" {{{ External configs
 runtime autoclose_tags.vim
 runtime coc_config.vim
 runtime wikiconfig.vim
+"}}}
 
-" Re-enable for Scala file types
-" au BufRead,BufNewFile *.sbt set filetype=scala
-
-" Highlight *.pcss files (postcss) as CSS (will use the postcss syntax)
-au BufNewFile,BufRead *.less set filetype=css
-
+" vim: set foldmethod=marker foldlevel=0 foldenable :
