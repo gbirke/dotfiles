@@ -102,8 +102,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Languages support
 Plug 'plasticboy/vim-markdown'
 Plug 'pearofducks/ansible-vim'
-Plug 'HerringtonDarkholme/yats.vim' " Yet Another TypeScript Syntax
-Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
+
+" These typescript plugins lead to errors, so I'll disable them for now
+" Plug 'HerringtonDarkholme/yats.vim' " Yet Another TypeScript Syntax
+" Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
+
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'vito-c/jq.vim'
 Plug 'leafOfTree/vim-vue-plugin'
