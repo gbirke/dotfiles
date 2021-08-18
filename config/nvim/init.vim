@@ -152,7 +152,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'qpkorr/vim-bufkill'
 
 " VimWiki
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " fzf integration
 Plug '/usr/local/opt/fzf'
