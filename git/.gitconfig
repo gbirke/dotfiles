@@ -35,7 +35,7 @@
     ciagain = commit -a --amend --no-edit
     add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
     forcepush = push --force-with-lease --no-verify
-    forcepull = !"git pull && git reset --hard FETCH_HEAD"
+    forcepull = !"git fetch && git reset --hard FETCH_HEAD"
     amend = commit --amend
 [push]
     default = simple
