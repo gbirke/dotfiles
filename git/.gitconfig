@@ -27,8 +27,7 @@
 	sw = switch
     df = diff
     rb = rebase
-    lg = log -p
-    ls = log --color --graph --pretty=format:'%Cred%h%Creset -
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lastlog = log -p -1
     unstage = reset HEAD --
     unstash = stash pop
