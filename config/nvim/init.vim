@@ -35,75 +35,6 @@ set updatetime=300
 filetype plugin on
 "}}}
 
-"{{{ Keyboard mappings
-
-" Set leader key from \ to Space
-let mapleader = " "
-
-" Remap common command typos
-command! W :w
-command! Wq :wq
-command! WQ :wq
-command! Q :q
-
-" Commands for fast editing and reload of Nvim config 
-command! Config execute ":e $MYVIMRC"
-command! Reload execute "source ~/.config/nvim/init.vim"
-
-" Upward motion line-by-line, even on wrapped lines
-nnoremap <down> gj
-nnoremap <up> gk
-
-" Delete search highlight with backspace
-nnoremap <BS> :nohlsearch<CR>
-
-" Switch between splits more quickly
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Swap two characters (Cursor on the first char)
-nmap <Leader>, "sdl"sp
-
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>t :Files<CR>
-nmap <Leader>r :Tags<CR>
-nmap <Leader>ne :NERDTreeFocus<CR>
-" Show current file in NERDTree
-nmap <Leader>nf :NERDTreeFind<CR>
-
-" Fugitive shortcuts
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gc :Git commit
-
-" fzf-nvalt
-nmap <Leader>nv :NV<CR>
-
-"}}}
-"
-"{{{ Plugin settings
-
-" Highlight typescript sections
-let g:vim_vue_plugin_use_typescript = 1
-
-" Language server for vue, needs https://www.npmjs.com/package/vue-language-server
-let g:LanguageClient_serverCommands = {
-    \ 'vue': ['vls']
-    \ }
-
-" Specify CoC extensions that should always exist
-let g:coc_global_extensions = ['coc-json', 'coc-rls']
-
-" Directories of my notes for Notation Velocity plugin
-let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
-
-" Disable BufKill mappings of leader key beginning with b, to speed up fzf
-" buffer switch
-let g:BufKillCreateMappings = 0
-
-"}}}
-
 "{{{ Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -206,9 +137,75 @@ Plug 'dense-analysis/ale'
 call plug#end()	
 
 "}}}
+"
+"{{{ Keyboard mappings
 
-"{{{ More Plugin settings and colorscheme
+" Set leader key from \ to Space
+let mapleader = " "
+
+" Remap common command typos
+command! W :w
+command! Wq :wq
+command! WQ :wq
+command! Q :q
+
+" Commands for fast editing and reload of Nvim config 
+command! Config execute ":e $MYVIMRC"
+command! Reload execute "source ~/.config/nvim/init.vim"
+
+" Upward motion line-by-line, even on wrapped lines
+nnoremap <down> gj
+nnoremap <up> gk
+
+" Delete search highlight with backspace
+nnoremap <BS> :nohlsearch<CR>
+
+" Switch between splits more quickly
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Swap two characters (Cursor on the first char)
+nmap <Leader>, "sdl"sp
+
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+nmap <Leader>ne :NERDTreeFocus<CR>
+" Show current file in NERDTree
+nmap <Leader>nf :NERDTreeFind<CR>
+
+" Fugitive shortcuts
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gc :Git commit
+
+" fzf-nvalt
+nmap <Leader>nv :NV<CR>
+
+"}}}
+"
+"{{{ Plugin settings and color scheme
+
 colorscheme onedark
+
+" Highlight typescript sections
+let g:vim_vue_plugin_use_typescript = 1
+
+" Language server for vue, needs https://www.npmjs.com/package/vue-language-server
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
+
+" Specify CoC extensions that should always exist
+let g:coc_global_extensions = ['coc-json', 'coc-rls']
+
+" Directories of my notes for Notation Velocity plugin
+let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
+
+" Disable BufKill mappings of leader key beginning with b, to speed up fzf
+" buffer switch
+let g:BufKillCreateMappings = 0
 
 " Disable automated folding of markdown files
 let g:vim_markdown_folding_disabled = 1
