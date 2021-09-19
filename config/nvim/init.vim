@@ -90,8 +90,8 @@ Plug 'tpope/vim-eunuch'
 " Kill buffers without closing the current window
 Plug 'qpkorr/vim-bufkill'
 
-" VimWiki
-" Plug 'vimwiki/vimwiki'
+" Wiki functionality
+Plug 'lervag/wiki.vim'
 
 " fzf integration
 Plug '/usr/local/opt/fzf'
@@ -134,7 +134,7 @@ Plug 'alok/notational-fzf-vim'
 " Asynchronous linting
 Plug 'dense-analysis/ale'
 
-call plug#end()	
+call plug#end()
 
 "}}}
 "
@@ -216,6 +216,9 @@ let g:ale_linters = {
 	\'jsx':['eslint'],
 	\'markdown':['mdl', 'writegood']
 \}
+
+let g:wiki_link_target_type = 'md'
+let g:wiki_filetypes = ['md', 'wiki']
 
 " }}}
 
