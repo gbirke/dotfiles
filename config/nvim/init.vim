@@ -81,6 +81,9 @@ Plug 'tpope/vim-surround'
 "Git Plugin
 Plug 'tpope/vim-fugitive'
 
+" Improve status line
+Plug 'vim-airline/vim-airline'
+
 " Show Git commits
 Plug 'junegunn/gv.vim'
 
