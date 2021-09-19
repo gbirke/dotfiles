@@ -231,4 +231,4 @@ runtime coc_config.vim
 runtime wikiconfig.vim
 "}}}
 
-" vim: set foldmethod=marker foldlevel=0 foldenable :
+" vim: set foldmethod=marker :
