@@ -1,7 +1,7 @@
 "{{{ Basic settings
 
 " Use True color Terminal
-set termguicolors 
+set termguicolors
 
 " Set Tab width to 4 Spaces
 set tabstop=4
@@ -109,6 +109,9 @@ Plug 'airblade/vim-gitgutter'
 " Automatically regenerate .spl files from word lists
 Plug 'micarmst/vim-spellsync'
 
+" Run tests with keystrokes
+Plug 'vim-test/vim-test'
+
 " Atom-Like theme
 Plug 'joshdick/onedark.vim'
 
@@ -152,7 +155,7 @@ command! Wq :wq
 command! WQ :wq
 command! Q :q
 
-" Commands for fast editing and reload of Nvim config 
+" Commands for fast editing and reload of Nvim config
 command! Config execute ":e $MYVIMRC"
 command! Reload execute "source ~/.config/nvim/init.vim"
 
@@ -173,11 +176,19 @@ nnoremap <C-H> <C-W><C-H>
 nmap <Leader>, "sdl"sp
 
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>t :Files<CR>
+nmap <Leader>f :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>ne :NERDTreeFocus<CR>
+
 " Show current file in NERDTree
 nmap <Leader>nf :NERDTreeFind<CR>
+
+" Run tests
+nmap <Leader>tn :TestNearest<CR>
+nmap <Leader>tf :TestFile<CR>
+nmap <Leader>ts :TestSuite<CR>
+nmap <Leader>tl :TestLast<CR>
+nmap <Leader>tv :TestVisit<CR>
 
 " Fugitive shortcuts
 nmap <Leader>gs :Gstatus<CR>
