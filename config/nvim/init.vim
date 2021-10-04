@@ -191,7 +191,7 @@ nmap <Leader>tl :TestLast<CR>
 nmap <Leader>tv :TestVisit<CR>
 
 " Fugitive shortcuts
-nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gs :Git<CR>
 nmap <Leader>gc :Git commit
 
 " fzf-nvalt
