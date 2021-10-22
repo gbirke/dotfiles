@@ -79,3 +79,9 @@ stdin
 PHPUnit
 refactorings
 Kaizen
+I18N
+refactor
+CLI
+phpstan
+app
+Middleware
