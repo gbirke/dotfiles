@@ -158,7 +158,7 @@ nmap <Leader>, "sdl"sp
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>r :Tags<CR>
-nmap <Leader>ne :NERDTreeFocus<CR>
+nmap <Leader>ne :NERDTreeToggle<CR>
 
 " Show current file in NERDTree
 nmap <Leader>nf :NERDTreeFind<CR>
