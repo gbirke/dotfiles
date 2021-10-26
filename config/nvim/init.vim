@@ -58,6 +58,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-liquid'
 Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
+Plug 'janiczek/vim-latte.git'
 
 " Languages not often used (eg. Advent of code), enable if really needed
 " Plug 'evanleck/vim-svelte'
