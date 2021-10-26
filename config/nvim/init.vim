@@ -231,6 +231,12 @@ let g:ale_linters = {
 	\'jsx':['eslint'],
 	\'markdown':['mdl', 'writegood']
 \}
+let g:ale_php_phpcbf_standard='PSR12'
+let g:ale_php_phpcs_standard='phpcs.xml.dist'
+let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
+  \}
 
 let g:wiki_link_target_type = 'md'
 let g:wiki_filetypes = ['md', 'wiki']
