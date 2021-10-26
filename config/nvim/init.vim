@@ -73,10 +73,8 @@ Plug 'vim-airline/vim-airline'
 " Move, Rename, Copy buffers and do other file system commands
 Plug 'tpope/vim-eunuch'
 
-" TODO Replace with https://github.com/famiu/bufdelete.nvim which is much
-" shorter
 " Kill buffers without closing the current window
-Plug 'qpkorr/vim-bufkill'
+Plug 'famiu/bufdelete.nvim'
 
 " Wiki functionality
 Plug 'lervag/wiki.vim'
@@ -139,6 +137,8 @@ command! Q :q
 command! Config execute ":e $MYVIMRC"
 command! Reload execute "source ~/.config/nvim/init.vim"
 
+command BD :Bdelete
+
 " Upward motion line-by-line, even on wrapped lines
 nnoremap <down> gj
 nnoremap <up> gk
@@ -174,9 +174,6 @@ nmap <Leader>tv :TestVisit<CR>
 nmap <Leader>gs :Git<CR>
 nmap <Leader>gc :Git commit
 
-" fzf-nvalt
-nmap <Leader>nv :NV<CR>
-
 "}}}
 "
 "{{{ Plugin settings and color scheme
@@ -194,9 +191,6 @@ let g:LanguageClient_serverCommands = {
 " Specify CoC extensions that should always exist
 let g:coc_global_extensions = ['coc-json', 'coc-rls']
 
-" Disable BufKill mappings of leader key beginning with b, to speed up fzf
-" buffer switch
-let g:BufKillCreateMappings = 0
 
 " Disable automated folding of markdown files
 let g:vim_markdown_folding_disabled = 1
