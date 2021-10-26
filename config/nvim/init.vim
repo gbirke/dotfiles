@@ -41,11 +41,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Languages support
 Plug 'plasticboy/vim-markdown'
 Plug 'pearofducks/ansible-vim'
-
-" These typescript plugins lead to errors, so I'll disable them for now
-" Plug 'HerringtonDarkholme/yats.vim' " Yet Another TypeScript Syntax
-" Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
-
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'vito-c/jq.vim'
 Plug 'leafOfTree/vim-vue-plugin'
@@ -59,16 +54,6 @@ Plug 'tpope/vim-liquid'
 Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte.git'
-
-" Languages not often used (eg. Advent of code), enable if really needed
-" Plug 'evanleck/vim-svelte'
-" Plug 'wlangstroth/vim-racket'
-" Plug 'derekwyatt/vim-scala'
-" Plug 'elixir-editors/vim-elixir'
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'algotech/ultisnips-php'
 
 " Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
@@ -85,12 +70,11 @@ Plug 'tpope/vim-fugitive'
 " Improve status line
 Plug 'vim-airline/vim-airline'
 
-" Show Git commits
-Plug 'junegunn/gv.vim'
-
 " Move, Rename, Copy buffers and do other file system commands
 Plug 'tpope/vim-eunuch'
 
+" TODO Replace with https://github.com/famiu/bufdelete.nvim which is much
+" shorter
 " Kill buffers without closing the current window
 Plug 'qpkorr/vim-bufkill'
 
@@ -126,17 +110,12 @@ Plug 'unblevable/quick-scope'
 " Show filesystem tree in window
 Plug 'scrooloose/nerdtree'
 
-" Align text, see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
-Plug 'godlygeek/tabular'
-
 " Automatically insert matching pairs for braces and quotes
 Plug 'jiangmiao/auto-pairs'
 
+" TODO replace with https://github.com/windwp/nvim-ts-autotag
 " Automatically close tags
 Plug 'alvan/vim-closetag'
-
-" Notational Velocity
-Plug 'alok/notational-fzf-vim'
 
 " Asynchronous linting
 Plug 'dense-analysis/ale'
@@ -214,9 +193,6 @@ let g:LanguageClient_serverCommands = {
 
 " Specify CoC extensions that should always exist
 let g:coc_global_extensions = ['coc-json', 'coc-rls']
-
-" Directories of my notes for Notation Velocity plugin
-let g:nv_search_paths = [ '~/Nextcloud/Notizen' ]
 
 " Disable BufKill mappings of leader key beginning with b, to speed up fzf
 " buffer switch
