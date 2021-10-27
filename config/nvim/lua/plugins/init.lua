@@ -20,12 +20,20 @@ Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte.git'
 
 
--- Languge Server
+-- Language Server
 Plug 'neovim/nvim-lspconfig'
 Plug('williamboman/nvim-lsp-installer', {branch="main"})
+Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
+Plug('hrsh7th/cmp-buffer', {branch="main"})
+Plug('hrsh7th/nvim-cmp', {branch="main"})
 
 -- Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
+
+-- Snippets
+Plug 'SirVer/ultisnips'
+Plug 'algotech/ultisnips-php'
+Plug('quangnguyen30192/cmp-nvim-ultisnips', {branch="main"}) -- Ultisnips as source for completion
 
 -- Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
