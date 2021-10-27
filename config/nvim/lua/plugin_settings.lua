@@ -8,10 +8,6 @@ require "pears".setup()
 vim.g.vim_vue_plugin_use_typescript = 1
 
 
--- Specify CoC extensions that should always exist
-vim.g.coc_global_extensions = {'coc-json', 'coc-rls'}
-
-
 -- Disable automated folding of markdown files
 vim.g.vim_markdown_folding_disabled = 1
 

@@ -22,9 +22,6 @@ Plug 'janiczek/vim-latte.git'
 -- Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
 
---Autocomplete/Language server
-Plug('neoclide/coc.nvim', {branch = 'release'})
-
 -- Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
 
