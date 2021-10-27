@@ -143,6 +143,10 @@ command BD :Bdelete
 nnoremap <down> gj
 nnoremap <up> gk
 
+" Use Tab as a buffer switcher in normal mode
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 " Delete search highlight with backspace
 nnoremap <BS> :nohlsearch<CR>
 
