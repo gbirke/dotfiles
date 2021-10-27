@@ -95,6 +95,8 @@ Plug 'micarmst/vim-spellsync'
 " Run tests with keystrokes
 Plug 'vim-test/vim-test'
 
+" TODO Replace with https://github.com/monsonjeremy/onedark.nvim or
+" https://github.com/navarasu/onedark.nvim when we have treesitter installed
 " Atom-Like theme
 Plug 'joshdick/onedark.vim'
 
@@ -105,13 +107,15 @@ Plug 'vim-scripts/upAndDown'
 " find targets
 Plug 'unblevable/quick-scope'
 
+" TODO replace with https://github.com/kyazdani42/nvim-tree.lua
 " Show filesystem tree in window
 Plug 'scrooloose/nerdtree'
 
 " Automatically insert matching pairs for braces and quotes
 Plug 'jiangmiao/auto-pairs'
 
-" TODO replace with https://github.com/windwp/nvim-ts-autotag
+" TODO replace with https://github.com/windwp/nvim-ts-autotag when we use
+"      treesitter
 " Automatically close tags
 Plug 'alvan/vim-closetag'
 
@@ -208,9 +212,9 @@ let g:ale_linters = {
 let g:ale_php_phpcbf_standard='PSR12'
 let g:ale_php_phpcs_standard='phpcs.xml.dist'
 let g:ale_fixers = {
-  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-  \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
-  \}
+	\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+	\ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
+\}
 
 let g:wiki_link_target_type = 'md'
 let g:wiki_filetypes = ['md', 'wiki']
