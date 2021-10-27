@@ -112,7 +112,7 @@ Plug 'unblevable/quick-scope'
 Plug 'scrooloose/nerdtree'
 
 " Automatically insert matching pairs for braces and quotes
-Plug 'jiangmiao/auto-pairs'
+Plug 'steelsojka/pears.nvim'
 
 " TODO replace with https://github.com/windwp/nvim-ts-autotag when we use
 "      treesitter
@@ -187,6 +187,9 @@ nmap <Leader>gc :Git commit
 "{{{ Plugin settings and color scheme
 
 colorscheme onedark
+
+" Start auto-pair plugin
+lua require "pears".setup()
 
 " Highlight typescript sections
 let g:vim_vue_plugin_use_typescript = 1
