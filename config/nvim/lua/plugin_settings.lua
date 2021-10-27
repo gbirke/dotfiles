@@ -3,7 +3,6 @@ vim.cmd('colorscheme onedark')
 -- Start auto-pair plugin
 require "pears".setup()
 
-
 -- Highlight typescript sections
 vim.g.vim_vue_plugin_use_typescript = 1
 

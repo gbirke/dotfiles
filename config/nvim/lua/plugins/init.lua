@@ -19,6 +19,11 @@ Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte.git'
 
+
+-- Languge Server
+Plug 'neovim/nvim-lspconfig'
+Plug('williamboman/nvim-lsp-installer', {branch="main"})
+
 -- Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
 
