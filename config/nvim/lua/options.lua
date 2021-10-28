@@ -32,3 +32,7 @@ vim.opt.updatetime=200
 -- Turn on filetype plugins in .config/nvim/ftplugin
 vim.cmd('filetype plugin on')
 
+-- Limit spell suggestions to 15 items
+-- Remove this when we switch spell to an FZF interface
+-- (see https://coreyja.com/vim-spelling-suggestions-fzf/ )
+vim.opt.spellsuggest = vim.opt.spellsuggest + '15'
