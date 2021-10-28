@@ -27,10 +27,10 @@ keymap('n', '<Leader>,', '"sdl"sp', o_default)
 keymap('n', '<Leader>b', ':Buffers<CR>', o_default)
 keymap('n', '<Leader>f', ':Files<CR>', o_default)
 keymap('n', '<Leader>r', ':Tags<CR>', o_default)
-keymap('n', '<Leader>ne', ':NERDTreeToggle<CR>', o_default)
+keymap('n', '<Leader>ne', ':NvimTreeToggle<CR>', o_default)
 
 -- Show current file in NERDTree
-keymap('n', '<Leader>nf', ':NERDTreeFind<CR>', o_default)
+keymap('n', '<Leader>nf', ':NvimTreeFindFile<CR>', o_default)
 
 -- Run tests
 keymap('n', '<Leader>tn', ':TestNearest<CR>', o_default)

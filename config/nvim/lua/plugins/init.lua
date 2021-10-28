@@ -83,9 +83,9 @@ Plug 'vim-scripts/upAndDown'
 -- find targets
 Plug 'unblevable/quick-scope'
 
--- TODO replace with https://github.com/kyazdani42/nvim-tree.lua
 -- Show filesystem tree in window
-Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 -- Automatically insert matching pairs for braces and quotes
 Plug 'steelsojka/pears.nvim'
