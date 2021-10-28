@@ -1,6 +1,6 @@
 require("options")
 require("plugins")
-require("plugin_settings")
+require("configure_plugins")
 require("mappings")
 vim.cmd 'source ~/.config/nvim/commands.vim'
 
