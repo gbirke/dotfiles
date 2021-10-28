@@ -2,6 +2,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.local/share/nvim/plugged')
 
+-- TODO sort alphabetically by language name
 -- Languages support
 Plug 'plasticboy/vim-markdown'
 Plug 'pearofducks/ansible-vim'
@@ -18,6 +19,7 @@ Plug 'tpope/vim-liquid'
 Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte'
+Plug('cespare/vim-toml', { branch='main' })
 
 -- Language Server
 Plug 'neovim/nvim-lspconfig'
