@@ -4,22 +4,22 @@ vim.call('plug#begin', '~/.local/share/nvim/plugged')
 
 -- TODO sort alphabetically by language name
 -- Languages support
-Plug 'plasticboy/vim-markdown'
 Plug 'pearofducks/ansible-vim'
-Plug 'alexlafroscia/postcss-syntax.vim'
-Plug 'vito-c/jq.vim'
-Plug 'leafOfTree/vim-vue-plugin'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'matthew-brett/vim-rst-sections'
-Plug 'amiralies/vim-rescript'
 Plug 'dag/vim-fish'
-Plug 'rust-lang/rust.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'tpope/vim-liquid'
-Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte'
+Plug 'tpope/vim-liquid'
+Plug 'lepture/vim-jinja'
+Plug 'vito-c/jq.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'plasticboy/vim-markdown'
+Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'amiralies/vim-rescript'
+Plug 'matthew-brett/vim-rst-sections'
+Plug 'rust-lang/rust.vim'
 Plug('cespare/vim-toml', { branch='main' })
+Plug 'leafOfTree/vim-vue-plugin'
 
 -- Language Server
 Plug 'neovim/nvim-lspconfig'
