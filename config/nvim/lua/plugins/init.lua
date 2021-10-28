@@ -17,7 +17,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-liquid'
 Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
-Plug 'janiczek/vim-latte.git'
+Plug 'janiczek/vim-latte'
 
 -- Language Server
 Plug 'neovim/nvim-lspconfig'
