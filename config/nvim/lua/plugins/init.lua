@@ -19,7 +19,6 @@ Plug 'lepture/vim-jinja'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte.git'
 
-
 -- Language Server
 Plug 'neovim/nvim-lspconfig'
 Plug('williamboman/nvim-lsp-installer', {branch="main"})
