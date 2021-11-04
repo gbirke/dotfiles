@@ -67,6 +67,7 @@ Plug 'junegunn/fzf.vim'
 -- Show contents of registers when hitting --
 Plug 'junegunn/vim-peekaboo'
 
+-- TODO replace with https://github.com/lewis6991/gitsigns.nvim when I use a different plugin manager (to call setup)
 -- Show Plus, minus and tilde signs in a gutter column to show git status--
 Plug 'airblade/vim-gitgutter'
 
