@@ -22,7 +22,7 @@ vim.opt.linebreak=true
 vim.opt.autowriteall=true
 
 -- Set spelling dictionary
-vim.opt.spellfile="~/.config/nvim/spell/en.utf-8.add"
+vim.opt.spellfile=vim.fn.expand("~/.config/nvim/spell/en.utf-8.add")
 
 -- Store undo tree between sessions. Nvim stores the files in /.local/share/nvim/undo (`:help undodir´)
 vim.opt.undofile=true
