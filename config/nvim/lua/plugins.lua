@@ -39,6 +39,9 @@ Plug('quangnguyen30192/cmp-nvim-ultisnips', {branch="main"}) -- Ultisnips as sou
 -- Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
 
+-- Comment out blocks of code with gc
+Plug 'tpope/vim-commentary'
+
 -- Make plugin commands repeatable
 Plug 'tpope/vim-repeat'
 
