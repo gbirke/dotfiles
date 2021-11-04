@@ -16,6 +16,11 @@ vim.opt.cursorline=true
 -- Proper word wrapping in soft wrap mode
 vim.opt.linebreak=true
 
+-- Write unsaved changes when changing buffers, quitting or editing new files
+-- See https://github.com/neovim/neovim/issues/16236 for caveats (quitting will save)
+-- See also https://www.reddit.com/r/vim/comments/232wq8/should_you_let_vim_autowrite/ for pros and cons
+vim.opt.autowriteall=true
+
 -- Set spelling dictionary
 vim.opt.spellfile="~/.config/nvim/spell/en.utf-8.add"
 
