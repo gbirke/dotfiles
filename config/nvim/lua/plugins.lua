@@ -69,8 +69,11 @@ Plug 'lervag/wiki.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
--- Show contents of registers when hitting --
+-- Show contents of registers when hitting "
 Plug 'junegunn/vim-peekaboo'
+
+-- Make saving and loading sessions more comfortable
+Plug 'rmagatti/auto-session'
 
 -- TODO replace with https://github.com/lewis6991/gitsigns.nvim when I use a different plugin manager (to call setup)
 -- Show Plus, minus and tilde signs in a gutter column to show git status--
