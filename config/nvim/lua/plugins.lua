@@ -48,6 +48,11 @@ Plug 'tpope/vim-repeat'
 --Git Plugin
 Plug 'tpope/vim-fugitive'
 
+-- Case-aware search and replace with "Subvert"
+-- Case-aware correction of frequently misspelt words with "Abolish"
+-- Case toggle
+Plug 'tpope/vim-abolish'
+
 -- Improve status line
 Plug 'vim-airline/vim-airline'
 
