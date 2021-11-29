@@ -86,3 +86,9 @@ phpstan
 app
 Middleware
 Lua
+Redis
+RabbitMQ
+Testingbot
+ZeroMQ
+Corinna
+linter
