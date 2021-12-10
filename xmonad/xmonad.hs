@@ -326,7 +326,8 @@ myStartupHook = do
     spawnOnce "compton &"
     spawnOnce "greenclip daemon &"
     spawnOnce "dunst &"
-    spawnOnce "xsetroot -cursor_name left_ptr"
+    spawnOnce "xsetroot -cursor_name left_ptr" -- Set mouse cursor style
+    spawnOnce "xset r rate 220 40" -- Set keyboard autorepeat to low delay and high repeat rate
     spawnOnce "~/.fehbg"
 
 ------------------------------------------------------------------------
