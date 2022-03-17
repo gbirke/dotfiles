@@ -37,6 +37,8 @@
     forcepush = push --force-with-lease --no-verify
     forcepull = !"git fetch && git reset --hard FETCH_HEAD"
     amend = commit --amend
+	who = blame
+	praise = blame
 [push]
     default = simple
 [include]
