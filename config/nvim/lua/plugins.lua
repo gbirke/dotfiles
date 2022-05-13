@@ -20,6 +20,7 @@ Plug 'matthew-brett/vim-rst-sections'
 Plug 'rust-lang/rust.vim'
 Plug('cespare/vim-toml', { branch='main' })
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'nelsyeung/twig.vim'
 
 -- Language Server
 Plug 'neovim/nvim-lspconfig'
