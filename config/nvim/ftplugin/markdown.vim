@@ -8,6 +8,9 @@ setlocal formatoptions-=l
 " Auto-Continue todo-lists, change 'comment' format options 
 setlocal comments=b:>,b:*,b:+,b:-\ [\ ],b:-
 
+" Always spell-check in markdown files
+setlocal spell
+
 " TODO Header increase and decrease shortcuts for individual headers, the ones
 " below increase all levels
 " nnoremap <S-RIGHT> :HeaderIncrease<CR>
