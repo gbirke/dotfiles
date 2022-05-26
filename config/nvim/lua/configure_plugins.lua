@@ -22,6 +22,21 @@ vim.g.ale_fixers = {
 	 php = { 'phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace' },
 }
 
+-- vim-vue syntax highlight and indent plugin
+-- See https://github.com/leafOfTree/vim-vue-plugin#configuration
+vim.g.vim_vue_plugin_config = { 
+  syntax = {
+	 template = { 'html' },
+	 script = { 'javascript', 'typescript' },
+	 style = { 'css', 'scss' },
+  },
+  full_syntax = {},
+  initial_indent = {},
+  attribute = 1,
+  keyword = 0,
+  foldexpr = 0,
+  debug = 0
+}
 
 -- configure lervag/wiki
 vim.g.wiki_link_target_type = 'md'
