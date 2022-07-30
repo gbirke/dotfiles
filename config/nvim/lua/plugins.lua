@@ -23,8 +23,9 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'nelsyeung/twig.vim'
 
 -- Language Server
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug('williamboman/nvim-lsp-installer', {branch="main"})
 Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
