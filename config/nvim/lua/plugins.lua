@@ -29,6 +29,9 @@ Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
 
+-- Automatically format code on saving
+Plug 'sbdchd/neoformat'
+
 -- Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
 
