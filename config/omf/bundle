@@ -3,6 +3,5 @@ package expand
 package https://github.com/decors/fish-colored-man
 package marlin
 package tab
-package thefuck
 theme bobthefish
 theme default
