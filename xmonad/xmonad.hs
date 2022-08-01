@@ -3,6 +3,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppOutput, ppCurrent, ppVisible, ppHidden, ppLayout,
   ppTitle, ppLayout, ppSep, ppUrgent, ppOrder, xmobarColor, wrap, shorten)
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.UrgencyHook
@@ -284,7 +285,7 @@ myManageHook = composeAll
 -- return (All True) if the default handler is to be run afterwards. To
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
-myEventHook = mempty
+myEventHook = ewmhDesktopsEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
@@ -337,7 +338,7 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "xmobar -x 0 /home/gbirke/.config/xmobar/xmobarrc"
-    xmonad $ withUrgencyHook NoUrgencyHook $ docks $ defaults xmproc
+    xmonad $ withUrgencyHook NoUrgencyHook $ docks $ ewmh $ defaults xmproc
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -363,7 +364,7 @@ defaults logHandle = def {
       -- hooks, layouts
         layoutHook         = myLayout,
         manageHook         = myManageHook,
-        handleEventHook    = myEventHook,
+        handleEventHook    = myEventHook <+> fullscreenEventHook,
         logHook            = myLogHook logHandle,
         startupHook        = myStartupHook
     }
