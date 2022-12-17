@@ -21,6 +21,8 @@ Plug 'rust-lang/rust.vim'
 Plug('cespare/vim-toml', { branch='main' })
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'nelsyeung/twig.vim'
+Plug 'andrewstuart/vim-kubernetes'
+Plug 'towolf/vim-helm'
 
 -- Language Server
 Plug 'williamboman/mason.nvim'
