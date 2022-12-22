@@ -3,22 +3,27 @@
 	excludesfile = ~/.gitignore_global
 	ignorecase = false
 	commitGraph = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
+
 [color]
     ui = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
+
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [alias]
     st = status
     ci = commit
@@ -39,19 +44,50 @@
     amend = commit --amend
 	who = blame
 	praise = blame
+
 [push]
     default = simple
+
 [include]
     path = ~/.gituser
+
 [rebase]
 	autosquash = true
+
 [diff]
 	noprefix = true
+	colorMoved = default
+
 [gc]
 	writeCommitGraph = true
+
 [pull]
 	ff = only
+
 [init]
 	defaultBranch = main
+
 [commit]
 	verbose = true
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	light = false
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[user]
+	email = gabriel.birke@wikimedia.de
+	name = Gabriel Birke
