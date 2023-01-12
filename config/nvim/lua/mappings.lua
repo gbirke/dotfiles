@@ -24,12 +24,15 @@ keymap('n', '<C-H>', '<C-W><C-H>', o_noremap)
 -- Swap two characters (Cursor on the first char)
 keymap('n', '<Leader>,', '"sdl"sp', o_default)
 
-keymap('n', '<Leader>b', ':Buffers<CR>', o_default)
-keymap('n', '<Leader>f', ':Files<CR>', o_default)
-keymap('n', '<Leader>r', ':Tags<CR>', o_default)
+-- Telescope
+keymap('n', '<Leader>b', "<cmd>lua require('telescope.builtin').buffers()<CR>", o_default)
+keymap('n', '<Leader>f', "<cmd>lua require('telescope.builtin').find_files()<CR>", o_default)
+keymap('n', '<Leader>r', "<cmd>lua require('telescope.builtin').help_tags()<CR>", o_default)
+
+-- Show file tree
 keymap('n', '<Leader>ne', ':NvimTreeToggle<CR>', o_default)
 
--- Show current file in NERDTree
+-- Show current file in file tree
 keymap('n', '<Leader>nf', ':NvimTreeFindFile<CR>', o_default)
 
 -- Run tests

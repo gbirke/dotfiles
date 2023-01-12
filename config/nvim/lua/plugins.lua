@@ -32,6 +32,12 @@ Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
 
+-- Lua utility library for Telescope
+Plug 'nvim-lua/plenary.nvim'
+
+-- Fuzzy finder
+Plug('nvim-telescope/telescope.nvim', {tag='0.1.0'})
+
 -- Automatically format code on saving
 Plug 'sbdchd/neoformat'
 
@@ -74,11 +80,7 @@ Plug 'famiu/bufdelete.nvim'
 
 -- Wiki functionality
 Plug 'lervag/wiki.vim'
-
--- fzf integration
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
+--
 -- Show contents of registers when hitting "
 Plug 'junegunn/vim-peekaboo'
 
