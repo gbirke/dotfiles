@@ -28,6 +28,7 @@ keymap('n', '<Leader>,', '"sdl"sp', o_default)
 keymap('n', '<Leader>b', "<cmd>lua require('telescope.builtin').buffers()<CR>", o_default)
 keymap('n', '<Leader>f', "<cmd>lua require('telescope.builtin').find_files()<CR>", o_default)
 keymap('n', '<Leader>r', "<cmd>lua require('telescope.builtin').help_tags()<CR>", o_default)
+keymap('n', 'z=', "<cmd>lua require('telescope.builtin').spell_suggest()<CR>", o_default)
 
 -- Show file tree
 keymap('n', '<Leader>ne', ':NvimTreeToggle<CR>', o_default)
