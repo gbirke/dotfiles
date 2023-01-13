@@ -32,6 +32,12 @@ Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
 
+-- Treesitter
+Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
+
+-- Automatically close tags with Treesitter
+Plug('windwp/nvim-ts-autotag')
+
 -- Lua utility library for Telescope
 Plug 'nvim-lua/plenary.nvim'
 
@@ -97,10 +103,13 @@ Plug 'micarmst/vim-spellsync'
 -- Run tests with keystrokes
 Plug 'vim-test/vim-test'
 
--- TODO Replace with https://github.com/monsonjeremy/onedark.nvim or
--- https://github.com/navarasu/onedark.nvim when we have treesitter installed
 -- Atom-Like theme
-Plug 'joshdick/onedark.vim'
+Plug 'navarasu/onedark.nvim'
+
+-- Add some themes for variety, until https://github.com/navarasu/onedark.nvim/pull/118 is merged
+Plug 'sainnhe/edge' -- very similar to onedark
+Plug('folke/tokyonight.nvim', { branch='main' })
+Plug 'shaunsingh/nord.nvim'
 
 -- Move Lines with Shift-<Up> and Shift-<Down>
 Plug 'vim-scripts/upAndDown'
@@ -115,11 +124,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 -- Automatically insert matching pairs for braces and quotes
 Plug 'steelsojka/pears.nvim'
-
--- TODO replace with https://github.com/windwp/nvim-ts-autotag when we use
---      treesitter
--- Automatically close tags
-Plug 'alvan/vim-closetag'
 
 -- Asynchronous linting
 Plug 'dense-analysis/ale'
