@@ -1,5 +1,5 @@
 -- Set colorscheme if loaded
-vim.cmd('silent! colorscheme onedark')
+vim.cmd('silent! colorscheme edge')
 
 -- Highlight typescript sections
 vim.g.vim_vue_plugin_use_typescript = 1
