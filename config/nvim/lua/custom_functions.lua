@@ -20,3 +20,13 @@ function _G.toggle_diagnostics()
 end
 
 vim.api.nvim_set_keymap('n', '<leader>td', ':call v:lua.toggle_diagnostics()<CR>',  {noremap = true, silent = true})
+
+
+-- Show list of config files in Telescope dialog
+vim.api.nvim_create_user_command(
+	'Config',
+	function ()
+		require('telescope.builtin').find_files({cwd="~/.config/nvim"})
+	end,
+	{}
+)
