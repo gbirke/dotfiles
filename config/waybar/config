@@ -17,9 +17,10 @@
 	},
 	"custom/keyboard": {
 		"exec": "~/.config/waybar/modules/keyboard.py \"1:1:AT_Translated_Set_2_keyboard\"",
-		"interval": 5,
+		"interval": "once",
 		"format": " {}  ",
-		"return-type": "json"
+		"return-type": "json",
+		"signal": 2
 	},
 	"battery": {
 		"format": "{capacity}% {icon}",

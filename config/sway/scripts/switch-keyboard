@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Send signal to Sway to switch keyboard layouts
+# Send SIGRTMIN to waybar to notify the custom module that the layout has changed.
+#
+# This script avoid the necessity for polling in the custom keyboard module
+# 
+# Copyright (C) 2023 Gabriel Birke <gb@birke-software.de>
+
+
+if [ -z "$1" ]; then
+	echo "You need to provide a sway input identifier. Run 'swaymsg -t get_inputs'"
+	exit 1
+fi
+
+swaymsg input "$1" xkb_switch_layout next
+pkill -SIGRTMIN+2 waybar
