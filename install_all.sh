@@ -18,4 +18,6 @@ ln -s $PWD/config/fish ~/.config/fish
 ln -s $PWD/config/nvim ~/.config/nvim
 ln -s $PWD/config/omf ~/.config/omf
 ln -s $PWD/config/youtube-dl ~/.config/youtube-dl
+ln -s $PWD/config/sway ~/.config/sway
+ln -s $PWD/config/waybar ~/.config/waybar
 
