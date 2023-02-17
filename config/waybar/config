@@ -20,7 +20,8 @@
 		"interval": "once",
 		"format": " {}  ",
 		"return-type": "json",
-		"signal": 2
+		"signal": 2,
+		"on-click": "~/.config/sway/scripts/switch-keyboard '1:1:AT_Translated_Set_2_keyboard'"
 	},
 	"battery": {
 		"format": "{capacity}% {icon}",
