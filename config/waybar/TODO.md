@@ -1,5 +1,10 @@
 # Missing features / Next steps
 
+## Machine-Specific configurations
+Currently, the waybar config is specific to my Thinkpad T14 notebook.
+
+Extend startup script to use jq to merge common JSON and machine-specific JSON into `~/.config/waybar/config` file.
+
 ## Network traffic
 Display accumulated upload / download speeds of all network interfaces.
 Can't be bothered with configuring a host-specific network interface at

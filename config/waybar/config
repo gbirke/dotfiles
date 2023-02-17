@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["sway/workspaces", "sway/mode"],
 	"modules-center": ["sway/window"],
-	"modules-right": ["tray", "memory", "cpu", "battery", "clock"],
+	"modules-right": ["tray", "memory", "cpu", "custom/keyboard", "battery", "clock"],
 	"sway/window": {
 		"max-length": 50
 	},
@@ -14,6 +14,12 @@
 		"interval": 5,
 		"format": "{usage}% ",
 		"max-length": 10
+	},
+	"custom/keyboard": {
+		"exec": "~/.config/waybar/modules/keyboard.py \"1:1:AT_Translated_Set_2_keyboard\"",
+		"interval": 5,
+		"format": " {}  ",
+		"return-type": "json"
 	},
 	"battery": {
 		"format": "{capacity}% {icon}",
