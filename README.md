@@ -25,15 +25,12 @@ Otherwise you have to edit the install script to use the `--target DIR` paramete
 ## Fish configuration
 First, install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish), [powerline fonts](https://github.com/powerline/fonts) for the [bob-the-fish theme](https://github.com/oh-my-fish/theme-bobthefish), and [fzf](https://github.com/junegunn/fzf)
 
-    rm -rf ~/.config/omf && ln -s ~/.dotfiles/config/omf ~/.config/omf
+    rm -rf ~/.config/omf && stow omf fish
 
-    ln -s ~/.dotfiles/config/fish ~/.config/fish
-
-To use autojump, you need to set the variable `autojump_fish` to the path of the `autojump.fish` file (e.g. `/usr/share/autojump/autojump.fish`)
 
 ## Configuring git name and email address
-I intentionally left out the name and email address from the git configuration because I use different ones for work and private commits.
-They can be added by creating the file `~/.gituser` with the following contents:
+I intentionally left out the name and email address from the git configuration because I use different ones on work and private machines.
+I add the file `~/.gituser` with the following contents:
 
     [user]
         name = Gabriel Birke
@@ -49,7 +46,7 @@ If you want to use the vim configuration with the [VimPlug][2] package manager, 
     stow vim-plug
     vim -c PlugInstall
 
-## Thanks
+## Acknowledgments
 Thanks to Brandon Invergo who [introduced me to this easy method of managing the dotfiles][1].
 
 [1]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two
