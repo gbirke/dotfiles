@@ -108,11 +108,6 @@ Plug 'vim-test/vim-test'
 -- Atom-Like theme
 Plug 'navarasu/onedark.nvim'
 
--- Add some themes for variety, until https://github.com/navarasu/onedark.nvim/pull/118 is merged
-Plug 'sainnhe/edge' -- very similar to onedark
-Plug('folke/tokyonight.nvim', { branch='main' })
-Plug 'shaunsingh/nord.nvim'
-
 -- Move Lines with Shift-<Up> and Shift-<Down>
 Plug 'vim-scripts/upAndDown'
 

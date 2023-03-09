@@ -1,5 +1,5 @@
 -- Set colorscheme if loaded
-vim.cmd('silent! colorscheme edge')
+vim.cmd('silent! colorscheme onedark')
 
 -- Disable automated folding of markdown files
 vim.g.vim_markdown_folding_disabled = 1
