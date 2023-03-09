@@ -44,7 +44,7 @@ Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 Plug('windwp/nvim-ts-autotag')
 
 -- Fuzzy finder
-Plug('nvim-telescope/telescope.nvim', {tag='0.1.0'})
+Plug('nvim-telescope/telescope.nvim', {tag='0.1.1'})
 
 -- Automatically format code on saving
 Plug 'sbdchd/neoformat'
