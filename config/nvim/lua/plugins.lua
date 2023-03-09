@@ -24,10 +24,15 @@ Plug 'nelsyeung/twig.vim'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'towolf/vim-helm'
 
+-- Lua utility library for Telescope and null-ls
+Plug 'nvim-lua/plenary.nvim'
+
 -- Language Server
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jay-babu/mason-null-ls.nvim'
 Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
@@ -37,9 +42,6 @@ Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 
 -- Automatically close tags with Treesitter
 Plug('windwp/nvim-ts-autotag')
-
--- Lua utility library for Telescope
-Plug 'nvim-lua/plenary.nvim'
 
 -- Fuzzy finder
 Plug('nvim-telescope/telescope.nvim', {tag='0.1.0'})
@@ -118,15 +120,12 @@ Plug 'vim-scripts/upAndDown'
 -- find targets
 Plug 'unblevable/quick-scope'
 
--- Show filesystem tree in window
+-- Show filesystem tree in window (devicons needs a nerd font)
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 -- Automatically insert matching pairs for braces and quotes
 Plug 'steelsojka/pears.nvim'
-
--- Asynchronous linting
-Plug 'dense-analysis/ale'
 
 vim.call('plug#end')
 

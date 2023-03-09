@@ -4,6 +4,7 @@ require("mason-lspconfig").setup {
 	ensure_installed = { "dockerls", "volar", "tsserver", "intelephense", "pylsp" }
 }
 
+-- Set global, LSP-related keybindings
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
