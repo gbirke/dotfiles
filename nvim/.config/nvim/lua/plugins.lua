@@ -43,8 +43,11 @@ Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 -- Automatically close tags with Treesitter
 Plug('windwp/nvim-ts-autotag')
 
--- Fuzzy finder
+-- Telescope as Fuzzy finder
 Plug('nvim-telescope/telescope.nvim', {tag='0.1.1'})
+
+-- Replace Vim selection menus with Telescope
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 -- Automatically format code on saving
 Plug 'sbdchd/neoformat'
