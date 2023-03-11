@@ -56,9 +56,9 @@ Plug 'sbdchd/neoformat'
 Plug 'rstacruz/sparkup'
 
 -- Snippets
-Plug 'SirVer/ultisnips'
-Plug 'algotech/ultisnips-php'
-Plug('quangnguyen30192/cmp-nvim-ultisnips', {branch="main"}) -- Ultisnips as source for completion
+Plug('L3MON4D3/LuaSnip', { tag = 'v1.2.*'})
+Plug 'rafamadriz/friendly-snippets'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 -- Surround code with quotes, brackets, etc
 Plug 'tpope/vim-surround'
