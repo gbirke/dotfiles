@@ -40,6 +40,9 @@ Plug('hrsh7th/nvim-cmp', {branch="main"})
 -- Treesitter
 Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 
+-- Treesitter text motions
+Plug 'nvim-treesitter/nvim-treesitter-textobjects';
+
 -- Automatically close tags with Treesitter
 Plug('windwp/nvim-ts-autotag')
 
