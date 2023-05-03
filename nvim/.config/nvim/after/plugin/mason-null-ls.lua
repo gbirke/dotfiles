@@ -3,5 +3,3 @@ require("mason-null-ls").setup({
 	ensure_installed = { "write-good" },
     automatic_setup = true,
 })
-
-require 'mason-null-ls'.setup_handlers()
