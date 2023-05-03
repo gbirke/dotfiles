@@ -2,27 +2,14 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.local/share/nvim/plugged')
 
--- TODO sort alphabetically by language name
--- Languages support
+-- Languages support (only plugins that do more than treesitter/language server)
 Plug 'pearofducks/ansible-vim'
--- Plug 'ekalinin/Dockerfile.vim'
-Plug 'dag/vim-fish'
-Plug 'jparise/vim-graphql'
-Plug 'janiczek/vim-latte'
-Plug 'tpope/vim-liquid'
-Plug 'lepture/vim-jinja'
-Plug 'vito-c/jq.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'plasticboy/vim-markdown'
-Plug 'alexlafroscia/postcss-syntax.vim'
-Plug 'amiralies/vim-rescript'
-Plug 'matthew-brett/vim-rst-sections'
-Plug 'rust-lang/rust.vim'
-Plug('cespare/vim-toml', { branch='main' })
-Plug 'leafOfTree/vim-vue-plugin'
-Plug 'nelsyeung/twig.vim'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'towolf/vim-helm'
+Plug 'vito-c/jq.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'matthew-brett/vim-rst-sections'
 
 -- Lua utility library for Telescope and null-ls
 Plug 'nvim-lua/plenary.nvim'
