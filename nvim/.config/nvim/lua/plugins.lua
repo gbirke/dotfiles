@@ -5,7 +5,7 @@ vim.call('plug#begin', '~/.local/share/nvim/plugged')
 -- TODO sort alphabetically by language name
 -- Languages support
 Plug 'pearofducks/ansible-vim'
-Plug 'ekalinin/Dockerfile.vim'
+-- Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
 Plug 'jparise/vim-graphql'
 Plug 'janiczek/vim-latte'
