@@ -1,5 +1,6 @@
 package argu
 package expand
+package fzf
 package https://github.com/decors/fish-colored-man
 package marlin
 package tab
