@@ -94,6 +94,9 @@ exec swayidle -w \
 	# Custom launcher
 	bindsym $mod+space exec wofi --show drun --allow-images
 
+	# Power menu
+	bindsym $mod+Shift+p exec ~/.config/sway/scripts/powermenu.sh
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
