@@ -83,6 +83,7 @@ Plug 'famiu/bufdelete.nvim'
 Plug 'lervag/wiki.vim'
 --
 -- Show contents of registers when hitting "
+-- TODO: replace with which-key, which does more
 Plug 'junegunn/vim-peekaboo'
 
 -- Make saving and loading sessions more comfortable
