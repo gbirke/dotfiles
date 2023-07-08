@@ -34,7 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects';
 Plug('windwp/nvim-ts-autotag')
 
 -- Telescope as Fuzzy finder
-Plug('nvim-telescope/telescope.nvim', {tag='0.1.1'})
+Plug('nvim-telescope/telescope.nvim', {tag='0.1.2'})
 
 -- Replace Vim selection menus with Telescope
 Plug 'nvim-telescope/telescope-ui-select.nvim'
