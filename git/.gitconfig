@@ -24,6 +24,10 @@
 	changed = green
 	untracked = cyan
 
+[color "decorate"]
+    tag = cyan bold
+
+
 [alias]
     st = status
     ci = commit
