@@ -24,6 +24,12 @@ Plug('hrsh7th/cmp-nvim-lsp', {branch="main"})
 Plug('hrsh7th/cmp-buffer', {branch="main"})
 Plug('hrsh7th/nvim-cmp', {branch="main"})
 
+-- Github Copilot
+-- In the future I might use nvim-cmp-copilot instead,
+-- so I don't have to mess with the tab settings.
+-- Currently (2023-09-05) there are too many reports of problems floating around
+Plug('github/copilot.vim')
+
 -- Treesitter
 Plug('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 
