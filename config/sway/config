@@ -26,6 +26,7 @@ set $lock ~/.config/sway/scripts/lock.sh
 # Clipboard menu with cliphist, https://github.com/sentriz/cliphist
 # Needs to be installed in your $PATH as `cliphist`, e.g. in /usr/local/bin
 set $clipboard_menu cliphist list | wofi --dmenu | cliphist decode | wl-copy
+set $clipboard_clear_menu cliphist list | wofi --dmenu | cliphist delete
 
 include /etc/sway/config-vars.d/*
 
@@ -230,6 +231,7 @@ bindsym $mod+r mode "resize"
 # On German keyboards, this is the #' key, on US keyboards, it's the \| key.
 bindcode $mod+51 exec $clipboard_menu
 bindcode $mod+Shift+51 exec $clipboard_menu
+bindcode $mod+Ctrl+51 exec $clipboard_clear_menu
 
 # Run/Restart Waybar on config reload 
 exec_always ~/.config/waybar/waybar.sh
