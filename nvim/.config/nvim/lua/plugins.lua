@@ -115,6 +115,9 @@ Plug 'vim-scripts/upAndDown'
 -- find targets
 Plug 'unblevable/quick-scope'
 
+-- Jump around with s and S keys
+Plug 'ggandor/leap.nvim'
+
 -- Show filesystem tree in window (devicons needs a nerd font)
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
