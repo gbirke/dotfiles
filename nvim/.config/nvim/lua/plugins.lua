@@ -73,9 +73,6 @@ Plug 'tpope/vim-fugitive'
 -- Case toggle
 Plug 'tpope/vim-abolish'
 
--- Obey .editorconfig files
-Plug 'gpanders/editorconfig.nvim'
-
 -- Improve status line
 Plug 'vim-airline/vim-airline'
 
