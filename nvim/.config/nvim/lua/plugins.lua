@@ -48,6 +48,9 @@ Plug 'nvim-telescope/telescope-ui-select.nvim'
 -- Automatically format code on saving
 Plug 'sbdchd/neoformat'
 
+-- Format code with the formatters installed by Mason
+Plug 'mhartington/formatter.nvim'
+
 -- Expand Zen coding / Emmet style class names to HTML with Ctrl-E
 Plug 'rstacruz/sparkup'
 
