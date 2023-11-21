@@ -48,10 +48,6 @@ return {
 	-- find targets
 	'unblevable/quick-scope',
 
-	-- Show filesystem tree in window (devicons needs a nerd font)
-	'kyazdani42/nvim-web-devicons',
-	'kyazdani42/nvim-tree.lua',
-
 	-- Automatically insert matching pairs for braces and quotes
 	{
 		'steelsojka/pears.nvim',
