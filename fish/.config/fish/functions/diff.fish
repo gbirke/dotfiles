@@ -1,9 +1,10 @@
 function diff
+	set __diffcmd (which diff)
 	if command -q delta
-		/usr/bin/diff $argv | delta
+		$__diffcmd $argv | delta
 	else if command -q colordiff
-		/usr/bin/diff $argv | colordiff
+		$__diffcmd $argv | colordiff
 	else
-		/usr/bin/diff $argv
+		$__diffcmd $argv
 	end
 end
