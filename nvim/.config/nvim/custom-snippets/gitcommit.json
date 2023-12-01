@@ -1,0 +1,11 @@
+{
+	"gitcommit-fun-team": {
+		"prefix": "funca",
+		"description": "Co-Authored-by FUN team lines",
+		"body": [
+			"Co-Authored-By: Abban Dunne <abban.dunne@wikimedia.de>",
+			"Co-Authored-By: Corinna Hillebrand <corinna.hillebrand@wikimedia.de>",
+		    "Co-Authored-By: Sperling-0 <tanuja.doriya@wikimedia.de>"
+		]
+	}
+}
