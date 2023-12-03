@@ -1,0 +1,3 @@
+matches:
+  - trigger: "keien"
+    replace: "keine"
