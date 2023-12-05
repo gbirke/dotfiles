@@ -28,7 +28,8 @@ keymap('n', '<Leader>,', '"sdl"sp', o_default)
 keymap('n', '<Leader>b', "<cmd>lua require('telescope.builtin').buffers({sort_lastused=true})<CR>", o_default)
 keymap('n', '<Leader>f', "<cmd>lua require('telescope.builtin').find_files()<CR>", o_default)
 keymap('n', '<Leader>gf', "<cmd>lua require('telescope.builtin').git_files()<CR>", o_default)
-keymap('n', '<Leader>r', "<cmd>lua require('telescope.builtin').help_tags()<CR>", o_default)
+keymap('n', '<Leader>gr', "<cmd>lua require('telescope.builtin').live_grep()<CR>", o_default)
+keymap('n', '<Leader>h', "<cmd>lua require('telescope.builtin').help_tags()<CR>", o_default)
 keymap('n', 'z=', "<cmd>lua require('telescope.builtin').spell_suggest()<CR>", o_default)
 
 -- Show file tree
