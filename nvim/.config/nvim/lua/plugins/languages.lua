@@ -10,7 +10,13 @@ return {
 		end
 	},
 
-	-- lanuages I haven't used in a while
+	-- hyprland config
+	{
+		"luckasRanarison/tree-sitter-hyprlang",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+	},	
+
+	-- languages I haven't used in a while
 	-- 'andrewstuart/vim-kubernetes',
 	-- 'towolf/vim-helm',
 }
