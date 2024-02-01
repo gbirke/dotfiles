@@ -1,3 +1,8 @@
 matches:
   - trigger: "keien"
     replace: "keine"
+
+
+  - trigger: "durhc"
+    replace: "durch"
+
