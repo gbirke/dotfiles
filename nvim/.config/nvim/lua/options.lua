@@ -1,3 +1,6 @@
+-- Set leader key
+vim.g.mapleader = " "
+
 -- Use true color Terminal
 vim.opt.termguicolors=true
 

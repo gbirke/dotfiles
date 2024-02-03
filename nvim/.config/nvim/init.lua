@@ -1,6 +1,6 @@
 require("options")
-require("mappings")
 require("lazy-load-plugins")
+require("mappings")
 require("custom_functions")
 
 -- Load command mappings
