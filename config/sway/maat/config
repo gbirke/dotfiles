@@ -1,0 +1,7 @@
+exec systemctl --user import-environment
+
+for_window [shell="xwayland"] title_format "[XWayland] %title"
+
+output DP-3 scale 1.5
+
+# vim: set ft=swayconfig:

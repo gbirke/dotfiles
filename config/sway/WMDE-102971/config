@@ -5,4 +5,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
 bindsym $mod+BackSpace exec ~/.config/sway/scripts/switch-keyboard "1:1:AT_Translated_Set_2_keyboard"
 
-# vim: set ft=swayconfig
+# Set default background image from Sway package on Ubuntu
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# vim: set ft=swayconfig:
