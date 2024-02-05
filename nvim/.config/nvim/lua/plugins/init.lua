@@ -32,6 +32,9 @@ return {
 	-- Make saving and loading sessions more comfortable
 	'rmagatti/auto-session',
 
+	-- Jump to last edit position when opening a file
+	'farmergreg/vim-lastplace',
+
 	-- Show Plus, minus and tilde signs in a gutter column to show git status--
 	'lewis6991/gitsigns.nvim',
 
