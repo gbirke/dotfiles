@@ -30,13 +30,23 @@ return {
 	'junegunn/vim-peekaboo',
 
 	-- Make saving and loading sessions more comfortable
-	'rmagatti/auto-session',
+	{
+		'rmagatti/auto-session',
+		config = function()
+			require('auto-session').setup()
+		end
+	},
 
 	-- Jump to last edit position when opening a file
 	'farmergreg/vim-lastplace',
 
 	-- Show Plus, minus and tilde signs in a gutter column to show git status--
-	'lewis6991/gitsigns.nvim',
+	{
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end
+	},
 
 	-- Automatically regenerate .spl files from word lists
 	'micarmst/vim-spellsync',
