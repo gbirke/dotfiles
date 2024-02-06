@@ -32,9 +32,7 @@ return {
 	-- Make saving and loading sessions more comfortable
 	{
 		'rmagatti/auto-session',
-		config = function()
-			require('auto-session').setup()
-		end
+		config = true -- call the setup function without arguments
 	},
 
 	-- Jump to last edit position when opening a file
@@ -43,9 +41,7 @@ return {
 	-- Show Plus, minus and tilde signs in a gutter column to show git status--
 	{
 		'lewis6991/gitsigns.nvim',
-		config = function()
-			require('gitsigns').setup()
-		end
+		config = true -- call the setup function without arguments
 	},
 
 	-- Automatically regenerate .spl files from word lists
