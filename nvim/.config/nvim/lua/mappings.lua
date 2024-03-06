@@ -20,8 +20,6 @@ keymap('n', '<C-K>', '<C-W><C-K>', o_noremap)
 keymap('n', '<C-L>', '<C-W><C-L>', o_noremap)
 keymap('n', '<C-H>', '<C-W><C-H>', o_noremap)
 
-keymap('n', '<Leader>hw', ":echo 'Hello, world!'<CR>", o_noremap)
-
 wk.register({
 	["<leader>"] = {
 		[','] = {
@@ -90,7 +88,7 @@ wk.register({
 			"Git status"
 		},
 		gc = {
-			':Git commit<CR>',
+			':Git commit',
 			"Git commit"
 		},
 
