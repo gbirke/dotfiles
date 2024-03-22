@@ -42,12 +42,14 @@
     unstash = stash pop
     publish = push -u origin HEAD
     ciagain = commit -a --amend --no-edit
-    add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
+    add-untracked = "!git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
     forcepush = push --force-with-lease --no-verify
-    forcepull = !"git fetch && git reset --hard FETCH_HEAD"
+    forcepull = "!git fetch && git reset --hard FETCH_HEAD"
     amend = commit --amend
 	who = blame
 	praise = blame
+	fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+
 
 [push]
     default = simple
