@@ -7,3 +7,4 @@
 .vagrant
 *.swp
 tags
+.phpactor.json
