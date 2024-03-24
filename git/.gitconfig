@@ -92,6 +92,10 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
+# Reuse Recorded Resolution (rerere) is a feature that remembers how you've resolved a conflicted hunk in the past, and can automatically resolve it for you in the future.
+[rerere]
+	enabled = true
+
 # Default user
 [user]
 	email = gb@birke-software.de
@@ -104,4 +108,5 @@
 # Work email account override based on work folder
 [includeIf "gitdir:~/src/WMDE"]
 	path = ~/src/WMDE/.gitconfig
+
 
