@@ -54,9 +54,6 @@
 [push]
     default = simple
 
-[include]
-    path = ~/.gituser
-
 [rebase]
 	autosquash = true
 
@@ -94,6 +91,17 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
+
+# Default user
 [user]
-	email = gabriel.birke@wikimedia.de
+	email = gb@birke-software.de
 	name = Gabriel Birke
+
+# Global Override
+[include]
+    path = ~/.gituser
+
+# Work email account override based on work folder
+[includeIf "gitdir:~/src/WMDE"]
+	path = ~/src/WMDE/.gitconfig
+
