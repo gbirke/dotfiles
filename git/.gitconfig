@@ -106,7 +106,7 @@
     path = ~/.gituser
 
 # Work email account override based on work folder
-[includeIf "gitdir:~/src/WMDE"]
+[includeIf "gitdir:~/src/WMDE/"]
 	path = ~/src/WMDE/.gitconfig
 
 
