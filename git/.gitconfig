@@ -44,7 +44,7 @@
     ciagain = commit -a --amend --no-edit
     add-untracked = "!git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
 	forcepush = push --force-with-lease --no-verify
-	forcepull = '!git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+	forcepull = "!git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
     amend = commit --amend
 	who = blame
 	praise = blame
