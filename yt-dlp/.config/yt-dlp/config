@@ -1,0 +1,43 @@
+# Format selection
+-f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"
+
+# Create a nice file name with a new property "file_title"
+# This is the title of the video, with trimmed whitespace, with all non-alphanumeric characters removed and all whitespace replaced by underscores
+--parse-metadata "title:%(file_title)s"
+--replace-in-metadata "file_title" "[^\w\s]" ""
+--replace-in-metadata "file_title" "^\s+|\s+$" ""
+--replace-in-metadata "file_title" "\s+" "_"
+
+# Output file name pattern with cleaned up title
+-o "%(file_title)s__%(id)s.%(ext)s"
+
+# Sleep between requests, to avoid getting blocked by YouTube
+--sleep-requests 1.5
+--min-sleep-interval 60
+--max-sleep-interval 90
+
+# Thumbnail selection
+--write-thumbnail 
+--embed-thumbnail
+--convert-thumbnails jpg
+
+# Subtitle selection
+--sub-lang en,de
+--write-subs
+--write-auto-subs
+--embed-subs
+--sub-format vtt/srt/best
+--convert-subs vtt
+# Sleep for 3 seconds between downloading each subtitle
+--sleep-subtitles 3
+
+# Write chapter metadata to the video file
+--embed-chapters
+
+# Write metadata to a JSON file
+--write-info-json
+
+# Remove unnecessary metatdata properties that take a lot of space
+# "videos" should be the same as --path, but we can't hardcode it here
+#--exec "INFOFILE=%(filename)q; jq '.|del(.formats,.automatic_captions,.thumbnails,._format_sort_fields)' ${INFOFILE%.mp4}.info.json > ${INFOFILE%.mp4}.json; rm ${INFOFILE%.mp4}.info.json"
+
