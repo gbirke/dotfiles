@@ -8,3 +8,6 @@
 *.swp
 tags
 .phpactor.json
+
+# vim-projectionist config
+.projections.json
