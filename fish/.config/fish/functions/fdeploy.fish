@@ -1,4 +1,4 @@
 function fdeploy
-	~/src/fundraising-deploy/fun-deploy.sh
+	~/src/WMDE/fundraising-deploy/fun-deploy.sh
 end
 
