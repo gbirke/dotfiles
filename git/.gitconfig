@@ -49,6 +49,8 @@
 	who = blame
 	praise = blame
 	fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+	# The "root" command allows jumping from a deeply nested subfolder with `cd $(git root)`
+	root = rev-parse --show-toplevel
 
 
 [push]
