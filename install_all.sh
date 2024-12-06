@@ -11,6 +11,7 @@ stow proselint
 stow tmux
 stow vim
 stow youtube-dl
+stow yt-dlp
 stow zsh
 
 mkdir -p ~/.config
