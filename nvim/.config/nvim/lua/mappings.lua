@@ -20,82 +20,22 @@ keymap('n', '<C-K>', '<C-W><C-K>', o_noremap)
 keymap('n', '<C-L>', '<C-W><C-L>', o_noremap)
 keymap('n', '<C-H>', '<C-W><C-H>', o_noremap)
 
-wk.register({
-	["<leader>"] = {
-		[','] = {
-			'"sdl"sp',
-			"Swap two characters",
-			noremap = false
-		},
+wk.add({
+    { "<leader>,", '"sdl"sp', desc = "Swap two characters", remap = true },
+    { "<leader>b", "<cmd>lua require('telescope.builtin').buffers({sort_lastused=true})<CR>", desc = "Buffers", group="Telescope" },
+    { "<leader>f", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files", group="Telescope" },
+    { "<leader>gc", ":Git commit", desc = "Git commit", group="Git" },
+    { "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", desc = "Git files", group="Telescope" },
+    { "<leader>gr", "<cmd>lua require('telescope.builtin').live_grep()<CR>", desc = "Grep", group="Telescope" },
+    { "<leader>gs", ":Git<CR>", desc = "Git status", group="Git" },
+    { "<leader>h", "<cmd>lua require('telescope.builtin').help_tags()<CR>", desc = "Help", group="Telescope" },
+    { "<leader>ne", ":NvimTreeToggle<CR>", desc = "Toggle file tree" },
+    { "<leader>nf", ":NvimTreeFindFile<CR>", desc = "Show current file in tree" },
+    { "<leader>tf", ":TestFile<CR>", desc = "Test file" },
+    { "<leader>tl", ":TestLast<CR>", desc = "Test last" },
+    { "<leader>tn", ":TestNearest<CR>", desc = "Test nearest" },
+    { "<leader>ts", ":TestSuite<CR>", desc = "Test suite" },
+    { "<leader>tv", ":TestVisit<CR>", desc = "Test visit" },
+    { "z=", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>", desc = "Spell suggest" },
 
-		b = {
-			"<cmd>lua require('telescope.builtin').buffers({sort_lastused=true})<CR>",
-			"Buffers"
-		},
-		f = {
-			"<cmd>lua require('telescope.builtin').find_files()<CR>",
-			"Find files"
-		},
-		gf = {
-			"<cmd>lua require('telescope.builtin').git_files()<CR>",
-			"Git files"
-		},
-		gr = {
-			"<cmd>lua require('telescope.builtin').live_grep()<CR>",
-			"Grep"
-		},
-		h = {
-			"<cmd>lua require('telescope.builtin').help_tags()<CR>",
-			"Help"
-		},
-		
-
-		ne = {
-			':NvimTreeToggle<CR>',
-			"Toggle file tree"
-		},
-		nf = {
-			':NvimTreeFindFile<CR>',
-			"Show current file in tree"
-		},
-
-		-- Test shortcuts
-		tn = {
-			':TestNearest<CR>',
-			"Test nearest"
-		},
-		tf = {
-			':TestFile<CR>',
-			"Test file"
-		},
-		ts = {
-			':TestSuite<CR>',
-			"Test suite"
-		},
-		tl = {
-			':TestLast<CR>',
-			"Test last"
-		},
-		tv = {
-			':TestVisit<CR>',
-			"Test visit"
-		},
-
-
-		-- Fugitive shortcuts
-		gs = {
-			':Git<CR>',
-			"Git status"
-		},
-		gc = {
-			':Git commit',
-			"Git commit"
-		},
-
-	}, -- END leader
-	["z="] = {
-			"<cmd>lua require('telescope.builtin').spell_suggest()<CR>",
-			"Spell suggest"
-	},
 })
-

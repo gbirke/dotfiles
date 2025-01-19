@@ -9,7 +9,7 @@ return {
 			config = function()
 				require("mason").setup()
 				require("mason-lspconfig").setup {
-					ensure_installed = { "dockerls", "volar", "tsserver", "intelephense", "pylsp" }
+					ensure_installed = { "dockerls", "volar", "ts_ls", "intelephense", "pylsp" }
 				}
 
 				-- Setup handlers for LSP servers
