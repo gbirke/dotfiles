@@ -57,11 +57,15 @@ return {
 	-- find targets
 	'unblevable/quick-scope',
 
-	-- Github Copilot
-	-- In the future I might use nvim-cmp-copilot instead,
-	-- so I don't have to mess with the tab settings.
-	-- Currently (2023-09-05) there are too many reports of problems floating around
-	'github/copilot.vim',
+	-- Github Copilot as a prerequisite for cmp
+	{
+		'zbirenbaum/copilot.lua',
+		cmd = 'Copilot',
+		event = 'InsertEnter',
+		config = function()
+			require("copilot").setup({})
+		end,
+	},
 
 	-- Automatically insert matching pairs for braces and quotes
 	{

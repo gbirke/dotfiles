@@ -9,6 +9,12 @@ return {
 		'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-path',
+		{
+			'zbirenbaum/copilot-cmp',
+			config = function ()
+				require("copilot_cmp").setup()
+			end
+		},
 
 	},
 	config = function()
@@ -31,6 +37,7 @@ return {
 				-- No tab completion, Tab is used for Github Copilot
 			}),
 			sources = cmp.config.sources({
+				{ name = 'copilot' },
 				{ name = 'nvim_lsp' },
 				{ name = 'luasnip' },
 				{
