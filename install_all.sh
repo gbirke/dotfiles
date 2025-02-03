@@ -1,6 +1,7 @@
 #!/bin/sh
 
 stow ack
+stow bat
 stow bash
 stow ctags
 stow fish
