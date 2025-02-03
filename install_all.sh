@@ -5,6 +5,7 @@ stow bash
 stow ctags
 stow fish
 stow git
+stow nushell
 stow nvim
 stow omf
 stow proselint
