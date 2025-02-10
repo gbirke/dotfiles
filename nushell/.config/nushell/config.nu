@@ -42,6 +42,6 @@ alias gst = git status
 alias grbc = git rebase --continue
 
 # a POSIX `ls` remnant I can't live without
-def lsaltr [] {
-	ls -la | sort-by modified --reverse
+def lsaltr [path?: string] {
+	ls -la ($path|default "."| path expand)| sort-by modified
 }
