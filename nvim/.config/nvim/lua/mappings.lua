@@ -22,7 +22,7 @@ keymap('n', '<C-H>', '<C-W><C-H>', o_noremap)
 
 wk.add({
     { "<leader>,", '"sdl"sp', desc = "Swap two characters", remap = true },
-    { "<leader>b", "<cmd>lua require('telescope.builtin').buffers({sort_mru=true})<CR>", desc = "Buffers", group="Telescope" },
+    { "<leader>b", "<cmd>lua require('telescope.builtin').buffers({sort_mru=true,ignore_current_buffer=true})<CR>", desc = "Buffers", group="Telescope" },
     { "<leader>f", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files", group="Telescope" },
     { "<leader>gc", ":Git commit", desc = "Git commit", group="Git" },
     { "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", desc = "Git files", group="Telescope" },
