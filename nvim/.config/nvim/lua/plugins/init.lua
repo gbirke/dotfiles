@@ -57,16 +57,6 @@ return {
 	-- find targets
 	'unblevable/quick-scope',
 
-	-- Github Copilot as a prerequisite for cmp
-	{
-		'zbirenbaum/copilot.lua',
-		cmd = 'Copilot',
-		event = 'InsertEnter',
-		config = function()
-			require("copilot").setup({})
-		end,
-	},
-
 	-- Automatically insert matching pairs for braces and quotes
 	{
 		'steelsojka/pears.nvim',
