@@ -1,0 +1,11 @@
+{
+	"name":"gabriels custom snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": ["all"],
+				"path":"./gitcommit.json"
+			}
+		]
+	}
+}

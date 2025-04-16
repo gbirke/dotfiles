@@ -8,6 +8,7 @@ stow fish
 stow git
 stow nushell
 stow nvim
+stow nvim-notes
 stow omf
 stow proselint
 stow tmux
