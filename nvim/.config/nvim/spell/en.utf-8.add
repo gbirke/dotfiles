@@ -160,3 +160,4 @@ ListenBrainz
 struct
 Nushell
 composables
+LSP
