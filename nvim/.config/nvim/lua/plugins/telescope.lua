@@ -33,6 +33,19 @@ return {
 					-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
 					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 				},
+				buffers = {
+					sort_lastused = true,
+					sort_mru = true,
+					ignore_current_buffer = true,
+					mappings = {
+						i = {
+							["<c-d>"] = actions.delete_buffer,
+						},
+						n = {
+							["<c-d>"] = actions.delete_buffer,
+						},
+					},
+				},
 			},
 			extensions = {
 				["ui-select"] = {
