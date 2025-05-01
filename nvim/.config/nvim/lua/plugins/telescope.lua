@@ -1,9 +1,9 @@
 return {
-	'nvim-telescope/telescope.nvim', 
-	version='~0.1.4',
+	"nvim-telescope/telescope.nvim",
+	version = "~0.1.4",
 	dependencies = {
-		'nvim-lua/plenary.nvim',
-		'nvim-telescope/telescope-ui-select.nvim',
+		"nvim-lua/plenary.nvim",
+		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -19,12 +19,12 @@ return {
 		table.insert(vimgrep_arguments, "--glob")
 		table.insert(vimgrep_arguments, "!**/.git/*")
 
-		telescope.setup {
+		telescope.setup({
 			defaults = {
 				vimgrep_arguments = vimgrep_arguments,
 				mappings = {
 					i = {
-						["<esc>"] = actions.close
+						["<esc>"] = actions.close,
 					},
 				},
 			},
@@ -36,13 +36,12 @@ return {
 			},
 			extensions = {
 				["ui-select"] = {
-					require("telescope.themes").get_dropdown {
+					require("telescope.themes").get_dropdown({
 						-- opts could go here
-					}
-
-				}
-			}
-		}
+					}),
+				},
+			},
+		})
 
 		telescope.load_extension("ui-select")
 	end,

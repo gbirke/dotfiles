@@ -1,6 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
 local o_noremap = { noremap = true }
-local o_default = {}
 local wk = require("which-key")
 
 -- Upward motion line-by-line, even on wrapped lines

@@ -1,5 +1,5 @@
 return {
-	'L3MON4D3/LuaSnip',
+	"L3MON4D3/LuaSnip",
 	tag = "v2.*",
 	config = function()
 		require("luasnip.loaders.from_vscode").lazy_load()
@@ -11,13 +11,15 @@ return {
 		-- My custom snippets
 
 		-- Team commits when mobbing or pairing
-		ls.add_snippets('gitcommit', {
-			s('funcommit', t({
-				'Co-Authored-By: Abban Dunne <abban.dunne@wikimedia.de>',
-				'Co-Authored-By: Corinna Hillebrand <corinna.hillebrand@wikimedia.de>',
-				'Co-Authored-By: Sperling-0 <tanuja.doriya@wikimedia.de>'
-			}))
+		ls.add_snippets("gitcommit", {
+			s(
+				"funcommit",
+				t({
+					"Co-Authored-By: Abban Dunne <abban.dunne@wikimedia.de>",
+					"Co-Authored-By: Corinna Hillebrand <corinna.hillebrand@wikimedia.de>",
+					"Co-Authored-By: Sperling-0 <tanuja.doriya@wikimedia.de>",
+				})
+			),
 		})
 	end,
 }
-
