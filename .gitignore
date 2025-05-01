@@ -6,6 +6,8 @@ fish/.config/fish/functions/fzf_key_bindings.fish
 nushell/.config/nushell/history.txt
 nushell/.config/nushell/vendor
 
+vale/.config/vale/localpath
+
 xmonad/xmonad-x86_64-linux
 xmonad/xmonad.errors
 xmonad/xmonad.hi
