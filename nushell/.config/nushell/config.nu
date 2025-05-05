@@ -44,8 +44,14 @@ alias grbc = git rebase --continue
 #### Custom Functions
 
 # a POSIX `ls` remnant I can't live without
-def lsaltr [path?: string] {
-	ls -la ($path|default "."| path expand)| sort-by modified
+def lsaltr [dir?: path] {
+	ls -la ($dir|default "."| path expand)| sort-by modified
+}
+
+# Create a directory and change into it
+def --env mkcd [dir: path] {
+	mkdir $dir
+	cd $dir
 }
 
 source ($nu.config-path | path dirname | path join "lib/prco.nu")
