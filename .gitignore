@@ -1,9 +1,12 @@
 fish/.config/fish/fishd.*
 fish/.config/fish/fish_variables
+fish/.config/fish/conf.d/*
 fish/.config/fish/functions/fzf_key_bindings.fish
 
 nushell/.config/nushell/history.txt
 nushell/.config/nushell/vendor
+
+vale/.config/vale/localpath
 
 xmonad/xmonad-x86_64-linux
 xmonad/xmonad.errors

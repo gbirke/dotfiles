@@ -33,6 +33,9 @@ return {
 		end,
 	},
 
+	-- Nicer list editing
+	{ "bullets-vim/bullets.vim" },
+
 	-- Automatically save files, for a smoother experience
 	{
 		"okuuva/auto-save.nvim",
