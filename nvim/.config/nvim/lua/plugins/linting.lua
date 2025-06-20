@@ -17,6 +17,7 @@ return {
 			typescript = { "eslint_d" },
 			dockerfile = { "hadolint" },
 			lua = { "luacheck" },
+			go = { "golangcilint" },
 
 			markdown = { "markdownlint", "vale" },
 			gitcommit = { "gitlint", "vale" },
