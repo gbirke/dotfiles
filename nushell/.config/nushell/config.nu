@@ -31,6 +31,14 @@ path add "/usr/local/bin"
 $env.EDITOR = "nvim"
 $env.config.buffer_editor = "nvim"
 
+
+# ZK (Zettelkasten) configuration
+# See https://zk-org.github.io/
+$env.ZK_NOTEBOOK_DIR = $nu.home-path + "/Documents/Notizen"
+# Nushell messes up many things, so we're using zsh internally.
+# We're using zsh because bash is too old on macOS
+$env.ZK_SHELL = "/bin/zsh"
+
 alias ll = ls -la
 alias .. = cd ..
 alias ... = cd ../..
