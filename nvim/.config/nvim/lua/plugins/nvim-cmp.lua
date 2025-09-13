@@ -9,23 +9,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
-		{
-			"zbirenbaum/copilot-cmp",
-			event = "InsertEnter",
-			config = function()
-				require("copilot_cmp").setup()
-			end,
-			dependencies = {
-				"zbirenbaum/copilot.lua",
-				cmd = "Copilot",
-				config = function()
-					require("copilot").setup({
-						suggestion = { enabled = false },
-						panel = { enabled = false },
-					})
-				end,
-			},
-		},
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -43,10 +26,8 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.close(),
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-				-- No tab completion, Tab is used for Github Copilot
 			}),
 			sources = cmp.config.sources({
-				{ name = "copilot" },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{
