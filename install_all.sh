@@ -6,6 +6,7 @@ stow bash
 stow ctags
 stow fish
 stow git
+stow jj
 stow nushell
 stow nvim
 stow nvim-notes

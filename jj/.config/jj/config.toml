@@ -1,0 +1,40 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Gabriel Birke"
+email = "gabriel.birke@wikimedia.de"
+
+[ui]
+default-command = "log"
+
+[templates]
+# show diff when editing description
+draft_commit_description = '''
+concat(
+  coalesce(description, builtin_draft_commit_description, "\n"),
+  surround(
+    "\nJJ: This commit contains the following changes:\n", "",
+    indent("JJ:     ", diff.stat(72)),
+  ),
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
+
+[aliases]
+publish = [ "git", "push", "--allow-new" ]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+praise = [ "file", "annotate" ]
+init = ["git", "init"]
+
+# disable pagination for `jj status` and `jj log`
+[[--scope]]
+--when.commands = ["status", "log"]
+[--scope.ui]
+paginate = "never"
+
+#  use `delta` for `jj diff` and `jj show`
+[[--scope]]
+--when.commands = ["diff", "show"]
+[--scope.ui]
+pager = "delta"
