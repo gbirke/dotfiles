@@ -2,7 +2,7 @@
 
 [user]
 name = "Gabriel Birke"
-email = "gabriel.birke@wikimedia.de"
+email = "gb@birke-software.de"
 
 [ui]
 default-command = "log"
@@ -26,6 +26,12 @@ publish = [ "git", "push", "--allow-new" ]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 praise = [ "file", "annotate" ]
 init = ["git", "init"]
+
+# override user.email if the repository is located under ~/oss
+[[--scope]]
+--when.repositories = ["~/src/WMDE"]
+[--scope.user]
+email = "gabriel.birke@wikimedia.de"
 
 # disable pagination for `jj status` and `jj log`
 [[--scope]]
