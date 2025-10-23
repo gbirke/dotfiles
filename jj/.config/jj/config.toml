@@ -24,8 +24,11 @@ concat(
 [aliases]
 publish = [ "git", "push", "--allow-new" ]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+
+# "Shortcut aliases"
 praise = [ "file", "annotate" ]
 init = ["git", "init"]
+e = ["edit"]
 
 # override user.email if the repository is located under ~/oss
 [[--scope]]
