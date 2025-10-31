@@ -31,6 +31,10 @@ init = ["git", "init"]
 e = ["edit"]
 bk = ["bookmark", "log", "--all-remotes", "--no-pager"]
 
+
+[git]
+colocate = false
+
 # override user.email if the repository is located under ~/oss
 [[--scope]]
 --when.repositories = ["~/src/WMDE"]
