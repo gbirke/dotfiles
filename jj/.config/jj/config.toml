@@ -29,7 +29,7 @@ tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 praise = [ "file", "annotate" ]
 init = ["git", "init"]
 e = ["edit"]
-bk = ["bookmark", "log", "--all-remotes", "--no-pager"]
+bk = ["bookmark", "list", "--all-remotes", "--no-pager"]
 
 
 [git]
