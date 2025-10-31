@@ -168,3 +168,6 @@ dotfiles
 colmena
 nixpkgs
 GPG
+Jujutsu
+VCS
+CSVs
