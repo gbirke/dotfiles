@@ -25,6 +25,9 @@ concat(
 publish = [ "git", "push", "--allow-new" ]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 
+# For showing the commits of a branch up to the point where it branched off "main"
+log-branch = ["log", "-r", "::@ ~ ::main@origin"]
+
 # "Shortcut aliases"
 praise = [ "file", "annotate" ]
 init = ["git", "init"]
