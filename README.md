@@ -14,11 +14,27 @@ Installing the files needs the GNU [`stow`](http://www.gnu.org/software/stow/) c
 You may choose a different name than .dotfiles, but make sure it's below your home directory. 
 Otherwise you have to edit the install script to use the `--target DIR` parameter of `stow`.
 
+### Cloning with `jj`
+
+```shell
+jj git clone --no-colocate https://github.com/gbirke/dotfiles.git ~/.dotfiles
+```
+
+If you already have used the dotfiles for jj and are switching from Git to
+jj (deleting the `.dotfiles` directory before running the jj command),
+then you create a chicken-and-egg situation where the newly cloned repo
+has no author name and email address because before cloning the
+`~/.config/jj/config.toml` file does not exists. The easiest way to
+resolve this is to `jj abandon` the empty commit after cloning. Since jj
+config file exists after cloning, this will then use the configured author
+information for the new empty commit.
+
 ### Install single dotfiles
 - `stow ack`
 - `stow bash`
 - `stow ctags`
 - `stow git`
+- `stow jj`
 - `stow vim`
 - `stow zsh`
 
