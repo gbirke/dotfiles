@@ -9,31 +9,7 @@ return {
 			config = function()
 				require("mason").setup()
 				require("mason-lspconfig").setup({
-					ensure_installed = { "dockerls", "volar", "ts_ls", "intelephense", "pylsp" },
-				})
-
-				-- Setup handlers for LSP servers
-				-- This is a table of lsp server names and handlers
-				-- The default handler is called for servers not specified here
-				-- The default handler is also used for servers that do not have a custom handler
-				-- Custom handlers are called with the server name as the first argument
-				-- see :h mason-lspconfig-automatic-server-setup for more details
-				require("mason-lspconfig").setup_handlers({
-					function(server_name) -- default handler, must be first in the list
-						require("lspconfig")[server_name].setup({})
-					end,
-
-					-- Example of a custom handler
-					-- ["dockerls"] = function (server_name)
-					-- 	require("lspconfig")[server_name].setup {
-					-- 		on_attach = function(client, bufnr)
-					-- 			-- Disable formatting in dockerfiles
-					-- 			if client.resolved_capabilities.document_formatting then
-					-- 				vim.lsp.handlers["textDocument/formatting"] = function() end
-					-- 			end
-					-- 		end
-					-- 	}
-					-- end,
+					ensure_installed = { "dockerls", "ts_ls", "intelephense", "pylsp" },
 				})
 			end,
 			cond = function()
