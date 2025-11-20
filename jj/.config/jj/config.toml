@@ -32,6 +32,7 @@ log-branch = ["log", "-r", "::@ ~ ::main@origin"]
 praise = [ "file", "annotate" ]
 init = ["git", "init"]
 e = ["edit"]
+df = ["diff"]
 bk = ["bookmark", "list", "--all-remotes", "--no-pager"]
 
 
