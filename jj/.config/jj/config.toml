@@ -24,8 +24,11 @@ concat(
 [aliases]
 publish = [ "git", "push", "--allow-new" ]
 
-# for moving bookmark to current commit
+# for moving bookmark to current/previous commit
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+ptug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+# Remove description from current commit (e.g. after a split)
 clear-desc = [ "describe", "-m", "" ]
 
 # For showing the commits of a branch up to the point where it branched off "main"
