@@ -23,11 +23,16 @@ concat(
 
 [aliases]
 publish = [ "git", "push", "--allow-new" ]
+
+# for moving bookmark to current commit
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 clear-desc = [ "describe", "-m", "" ]
 
 # For showing the commits of a branch up to the point where it branched off "main"
 log-branch = ["log", "-r", "::@ ~ ::main@origin"]
+
+# Show commit message and changes of previous change
+lastlog = ["show", "@-"]
 
 # "Shortcut aliases"
 praise = [ "file", "annotate" ]
