@@ -20,14 +20,22 @@ return {
 			-- languages here or re-enable it for the disabled ones.
 			local disable_filetypes = { c = true, cpp = true }
 			local lsp_format_opt
-			if disable_filetypes[vim.bo[bufnr].filetype] then
+			local lsp_fallback_opt
+			local ft = vim.bo[bufnr].filetype
+			if disable_filetypes[ft] then
 				lsp_format_opt = "never"
 			else
 				lsp_format_opt = "fallback"
 			end
+			-- Disable LSP fallback for Python because it destroys f-strings
+			lsp_fallback_opt = true
+			if ft == "python" then
+				lsp_fallback_opt = false
+			end
 			return {
 				timeout_ms = 500,
 				lsp_format = lsp_format_opt,
+				lsp_fallback = lsp_fallback_opt,
 			}
 		end,
 		formatters_by_ft = {
@@ -51,8 +59,13 @@ return {
 			-- PHP formatting
 			-- phpcbf (PHP Code Beautifier and Fixer) is the default tool we use at WMDE
 			-- and I use it as well for my personal projects.
-			-- In the future, I might chekc out the slightly more moder php-cs-fixer
+			-- In the future, I might check out the slightly more modern php-cs-fixer
 			php = { "phpcbf" },
+
+			-- Python formatting
+			-- Ruff is a fast Python linter and formatter written in Rust.
+			-- It can even reorder imports like "isort"
+			python = { "ruff_format" },
 		},
 	},
 }

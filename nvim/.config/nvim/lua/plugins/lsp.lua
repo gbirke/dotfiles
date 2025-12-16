@@ -9,7 +9,7 @@ return {
 			config = function()
 				require("mason").setup()
 				require("mason-lspconfig").setup({
-					ensure_installed = { "dockerls", "ts_ls", "intelephense", "pylsp" },
+					ensure_installed = { "dockerls", "ts_ls", "intelephense", "pylsp", "ruff" },
 				})
 			end,
 			cond = function()
