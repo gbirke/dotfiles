@@ -7,7 +7,9 @@
 .vagrant
 *.swp
 tags
-.phpactor.json
+*.phpactor.json
+aider.*
+coverage.clover
 
 # vim-projectionist config
 .projections.json
