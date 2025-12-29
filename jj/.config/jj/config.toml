@@ -24,6 +24,7 @@ concat(
 [aliases]
 publish = [ "git", "push", "--allow-new" ]
 pull = [ "git", "fetch" ]
+push = [ "git", "push" ]
 
 # for moving bookmark to current/previous commit
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
