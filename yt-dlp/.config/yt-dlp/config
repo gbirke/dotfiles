@@ -12,27 +12,27 @@
 -o "%(file_title)s__%(id)s.%(ext)s"
 
 # Sleep between requests, to avoid getting blocked by YouTube
---sleep-requests 1.5
+--sleep-requests 5
 --min-sleep-interval 60
 --max-sleep-interval 90
 
 # Thumbnail selection
---write-thumbnail 
---embed-thumbnail
---convert-thumbnails jpg
+#--write-thumbnail 
+#--embed-thumbnail
+#--convert-thumbnails jpg
 
 # Subtitle selection
---sub-lang en,de
---write-subs
---write-auto-subs
---embed-subs
---sub-format vtt/srt/best
---convert-subs vtt
-# Sleep for 3 seconds between downloading each subtitle
---sleep-subtitles 3
+#--sub-lang en,de
+# --write-subs
+# --write-auto-subs
+# --embed-subs
+# --sub-format vtt/srt/best
+# --convert-subs vtt
+# # Sleep for 3 seconds between downloading each subtitle
+# --sleep-subtitles 3
 
-# Write chapter metadata to the video file
---embed-chapters
+# # Write chapter metadata to the video file
+# --embed-chapters
 
 # Write metadata to a JSON file
 --write-info-json
